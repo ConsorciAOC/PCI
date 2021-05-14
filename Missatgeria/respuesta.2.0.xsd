@@ -62,7 +62,7 @@
 	<xs:element name="DatosGenericos">
 		<xs:complexType>
 			<xs:all>
-				<xs:element ref="Emisor"/>
+				<xs:element ref="Emisor" minOccurs="0"/>
 				<xs:element ref="Solicitante"/>
 				<xs:element ref="Titular" minOccurs="0"/>
 				<xs:element ref="Transmision"/>
