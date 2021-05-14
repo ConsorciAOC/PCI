@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by  () -->
+<xs:schema xmlns="http://gencat.net/scsp/esquemes/confirmacionPeticion" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://gencat.net/scsp/esquemes/confirmacionPeticion" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Atributos">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="IdPeticion"/>
+				<xs:element ref="NumElementos"/>
+				<xs:element ref="TimeStamp"/>
+				<xs:element ref="Estado" minOccurs="0"/>
+				<xs:element ref="CodigoCertificado"/>
+				<xs:element ref="CodigoProducto"/>
+				<xs:element ref="Emisor" minOccurs="0"/>
+				<xs:element ref="IdSolicitanteOriginal" minOccurs="0"/>
+				<xs:element ref="NomSolicitanteOriginal" minOccurs="0"/>
+				<xs:element ref="Funcionario" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CodigoCertificado">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="64"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CodigoEstado">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="4"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CodigoEstadoSecundario">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="16"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ConfirmacionPeticion">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="Atributos"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Estado">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="CodigoEstado" minOccurs="0"/>
+				<xs:element ref="CodigoEstadoSecundario" minOccurs="0"/>
+				<xs:element ref="LiteralError" minOccurs="0"/>
+				<xs:element ref="TiempoEstimadoRespuesta" minOccurs="0"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IdPeticion">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="16"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="LiteralError">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="255"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NumElementos">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:totalDigits value="7"/>
+				<xs:minInclusive value="0"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TiempoEstimadoRespuesta">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:totalDigits value="4"/>
+				<xs:minInclusive value="0"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="TimeStamp">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="29"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CodigoProducto">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Emisor">
+		<xs:complexType>
+			<xs:all>
+				<xs:element ref="NifEmisor"/>
+				<xs:element ref="NombreEmisor"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IdSolicitanteOriginal">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NomSolicitanteOriginal">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NifEmisor">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NombreEmisor">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="Funcionario">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NombreCompletoFuncionario" minOccurs="0"/>
+				<xs:element ref="NifFuncionario" minOccurs="0"/>
+				<xs:element ref="EMailFuncionario" minOccurs="0"/>
+				<xs:element ref="CodigoOrganismoFuncionario" minOccurs="0"/>
+				<xs:element name="CertificadoDigital" type="xs:base64Binary" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NombreCompletoFuncionario">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="122"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NifFuncionario">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="10"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="EMailFuncionario">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="122"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="CodigoOrganismoFuncionario">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>
