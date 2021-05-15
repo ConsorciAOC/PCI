@@ -1,16 +1,11 @@
-﻿![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.001.png)
 
-**Especificació de missatgeria pel consum de productes ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.002.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.003.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.004.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.005.png)**
+**Especificació de missatgeria pel consum de productes**
 
-**Plataforma de Col·laboració Interadministrativa  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.006.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.007.png)**
-
-![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.008.png)
-![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.009.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.010.png) Missatgeria PCI   ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.011.png) pàg PAGE2/NUMPAGES30  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.012.png)
+**Plataforma de Col·laboració Interadministrativa**
 
 **Control del document** 
 
 **Informació general** 
-
 
 
 |**Títol:** |Especificació  de  missatgeria  pel  consum  de productes  –  Plataforma  de  Col·laboració Interadministrativa (PCI) |
@@ -21,7 +16,6 @@
 |**Llista de distribució:** |Àrea de Tecnologia – Suport Tècnic |
 |**Nom del document:** |PCI - Missatgeria.doc |
 **Històric de revisions** 
-
 
 
 |**Versió** |**Data** |**Autor** |**Comentaris** |
@@ -36,15 +30,9 @@
 |V5.2 |17/10/2013 |Roger Noguera i Arnau |Element *NombreFichero* opcional. |
 |V5.3 |30/07/2014 |Roger Noguera i Arnau |Extensions  de  missatgeria  PCI (versions  imprimibles)  adaptades  a DESA’L. |
 |V6.0 |01/01/2020 |Roger Noguera i Arnau |Discontinuació del frontal FTP. |
-
-` `PCI - Missatgeria\_v7.1.doc,  10/11/200i8 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.013.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.014.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.015.png)
-![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.009.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.010.png) Missatgeria PCI   ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.011.png) pàg PAGE3/NUMPAGES30  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.012.png)
 |V7.0 |22/05/2020 |OT Suport Tècnic |Modificació  endpoint Clúster PCI, més afegir els nous per NT. |
-| - | - | - | :- |
 |V7.1 |30/11/2020 |OT Suport Tècnic |Modificació punt 5.1 (ST-11136) |
 
-` `PCI - Missatgeria\_v7.1.doc,   10/11/200ii8 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.013.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.014.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.015.png)
-![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.009.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.010.png) Missatgeria PCI   ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.011.png) pàg PAGE4/NUMPAGES30  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.012.png)
 
 **Índex** 
 
@@ -73,7 +61,8 @@
 1. [Estructura ......................................................................................................... 12](#_page16_x82.00_y236.04)
 1. [Descripció de camps ........................................................................................ 12](#_page16_x82.00_y591.04)
 1. [Exemple de missatge ....................................................................................... 13](#_page17_x82.00_y504.04)
-3. [Sol·licitud resposta ................................................................................................................... 14](#_page18_x82.00_y135.04)
+3. [Sol·licitud resposta ................................................................................................................... 14](#_page18_x82.00_y135.04)
+
 ` `PCI - Missatgeria\_v7.1.doc,  10/11/200iii8 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.013.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.014.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.015.png)
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.009.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.010.png) Missatgeria PCI   ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.011.png) pàg PAGE5/NUMPAGES30  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.012.png)
 
@@ -90,7 +79,8 @@
 1. [Exemple de missatge ....................................................................................... 22](#_page26_x82.00_y367.04)
 5  [Política de seguretat ................................................................................................................. 23](#_page27_x82.00_y119.04)
 1. [Autenticació .............................................................................................................................. 23](#_page27_x82.00_y150.04)
-1. [Autorització ............................................................................................................................... 23](#_page27_x82.00_y469.04)
+1. [Autorització ............................................................................................................................... 23](#_page27_x82.00_y469.04)
+
 ` `PCI - Missatgeria\_v7.1.doc,  10/11/20i0v8  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.013.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.014.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.015.png)
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.009.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.010.png) Missatgeria PCI   ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.011.png) pàg PAGE24/NUMPAGES30  ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.012.png)
 
