@@ -17,7 +17,7 @@
 
 # Índex
 
-1  [Introducció ...................................................................................................................................1](#introducció)
+[Introducció ...................................................................................................................................1](#introducció)
 1  [Requeriments d’accés als serveis ...............................................................................................1](#_page5_x82.00_y236.04)
 1. [Sol·licitud d’autorització ...............................................................................................................1](#_page5_x82.00_y329.04)
 1. [Requeriments per accés via frontal webservice ..........................................................................1](#_page5_x82.00_y563.04)
@@ -64,7 +64,7 @@ Aquest document detalla la missatgeria genèrica establerta pel consum de produc
 
 Aquest document complementa la documentació específica de qualsevol producte publicat a la PCI. 
 
-**2  Requeriments d’accés als serveis** 
+## Requeriments d’accés als serveis
 
 A  continuació  s’indiquen  els  requeriments  necessaris  per  tal  de  poder  consumir  els  productes d’interoperabilitat. 
 
