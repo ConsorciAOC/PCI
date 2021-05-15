@@ -18,7 +18,7 @@
 # Índex
 
 [Introducció ...................................................................................................................................1](#introducció)
-1  [Requeriments d’accés als serveis ...............................................................................................1](#_page5_x82.00_y236.04)
+[Requeriments d’accés als serveis ...............................................................................................1](#_page5_x82.00_y236.04)
 1. [Sol·licitud d’autorització ...............................................................................................................1](#_page5_x82.00_y329.04)
 1. [Requeriments per accés via frontal webservice ..........................................................................1](#_page5_x82.00_y563.04)
 1. [Política de seguretat ........................................................................................... 1](#_page5_x82.00_y602.04)
@@ -68,7 +68,8 @@ Aquest document complementa la documentació específica de qualsevol producte p
 
 A  continuació  s’indiquen  els  requeriments  necessaris  per  tal  de  poder  consumir  els  productes d’interoperabilitat. 
 
-1. **Sol·licitud d’autorització** 
+### Sol·licitud d’autorització
+
 - Sol·licitar al CAOC l’autorització per accedir al producte i modalitat de consum que es desitja en nom de l’organisme requeridor del qual som responsables i per a les finalitats que motiven l’accés al producte. 
 
 Un cop l’autorització es faci efectiva, s’informarà a l’organisme requeridor la següent informació d’autorització que caldrà conèixer a l’hora d’invocar serveis d’interoperabilitat i que constarà al catàleg de serveis de la PCI: 
@@ -78,15 +79,16 @@ Un cop l’autorització es faci efectiva, s’informarà a l’organisme requer
 - Codi/s de modalitat de consum 
 - Codi/s de finalitat 
 - Sol·licitar al CAOC l’autorització del certificat CDA amb el que es signaran les peticions dirigides a la PCI via els frontals webservice. 
-2. **Requeriments per accés via frontal webservice** 
-1. **Política de seguretat** 
+
+## Requeriments per accés via frontal webservice
+
+### Política de seguretat
 
 Tota petició destinada a la PCI via un frontal webservice està subjecte a la política de seguretat que es detalla en l’apartat[` `*5- Política de seguretat* ](#_page27_x82.00_y119.04)d’aquest document. 
 
-2. **URLs d’accés de producció** 
-1. **Clúster d’interoperabilitat (IOP)** 
+## URLs d’accés de producció
 
-
+### Clúster d’interoperabilitat (IOP)
 
 |*Frontal síncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
@@ -98,23 +100,20 @@ Tota petició destinada a la PCI via un frontal webservice està subjecte a la p
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3.iop.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
-2. **Clúster d’aplicacions (APP)** 
 
-
+### Clúster d’aplicacions (APP)
 
 |*Frontal síncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3.app.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3.app.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
-3. **Clúster d’eNOTUM (NT)** 
 
-
+### Clúster d’eNOTUM (NT)
 
 |*Frontal síncron* |https://serveis3.nt.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
