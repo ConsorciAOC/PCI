@@ -148,7 +148,7 @@ Tota petició destinada a la PCI via un frontal webservice està subjecte a la p
 |*WSDL frontal síncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl |
-|*WSDL frontal asíncron-resposta* |https://serveis3-pre.app.aoc.cat/siri- proxy/services/AsincronResposta?wsdl |
+|*WSDL frontal asíncron-resposta* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
 
 #### Clúster d’eNOTUM (NT)
 
@@ -174,87 +174,73 @@ Mitjançant  el  frontal  webservice  síncron,  l’enviament  de  la  petició
 
 En aquesta comunicació es defineixen dos missatges: *Peticion* i *Respuesta*. 
 
-PPCCII  :: ORORGANISGANISMMEE![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.016.png)
+![Frontal webservice síncron](img/Frontal%20webservice%20s%C3%ADncron.PNG)
 
-2. **Frontal webservice asíncron** 
+### Frontal webservice asíncron
 
 Mitjançant el frontal webservice asíncron, l’enviament de la petició rep com a resposta la previsió d’entrega  de  la  informació  demanada  o  TER  (temps  estimat  de  resposta).  Així,  l’entrega  de  la resposta es realitza en una segona comunicació.  
 
 En  aquesta  comunicació  es  defineixen  quatre  missatges:  *Peticion*,  *ConfirmacionPeticion*, *SolicitudRespuesta* i *Respuesta*. 
 
-PPCCII  :: PPCCII  ::  FRFRONONTATALL ORORGANISGANISMMEE![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.017.png)
+![Frontal webservice asíncron](img/Frontal%20webservice%20as%C3%ADncron.PNG)
 
-FRFRONONTATALL AASSIINNCCRRONON RREEQUQUEERRIIDDOROR
-
-AASSIINNCCRRONON RREESSPPOSTOSTAA
-
-PPetieticciionon ConfConfiirrmmacaciiononPPetieticciionon
-
-SSololiicciitudtudResRespupuesestata ResRespupuesestata
-
-2. **Tipus de missatges i operacions** 
+## Tipus de missatges i operacions
 
 A continuació es descriuen les diferents operacions així com la missatgeria associada.  
 
 Remarcar  que  dins  de  l’esquema  de  *Peticion*  i  *Respuesta*  existeix  un  node  de  tipus  lliure  *(any*) anomenat *DatosEspecificos* preparat per contenir la informació específica de petició i de resposta dels diferents productes d’interoperabilitat i que es detalla als documents de servei de cada producte. 
-
-
 
 ||*Missatge entrada (Organisme requeridor* à *PCI)* |<p>*Missatge sortida* </p><p>*(PCI* à *Organisme requeridor)* </p>|
 | :- | :- | - |
 |*Frontal WS síncron* |peticion.xsd |respuesta.xsd |
 |*Frontal WS asíncron* |peticion.xsd |confirmacion-peticion.xsd |
 |*Frontal WS asíncron-resposta* |solicitud-respuesta |respuesta.xsd |
-**Taula 1 - Schemes associats a cada comunicación** 
 
-1. **Petició síncrona i asíncrona** 
+<p align="center"><b>Taula 1 - Schemes associats a cada comunicación</b></p>
 
-
+### Petició síncrona i asíncrona
 
 |*Característica* |*Descripció* |
 | - | - |
 |Sentit |Organisme requeridor à PCI |
 |Contingut |Aquest  missatge  conté  la  informació  necessària  per  identificar  el  producte  a consumir (organisme emissor, producte i modalitat de consum) i les dades del requeridor (organisme requeridor, finalitat per la qual està autoritzat el consum, funcionari que sol·licita la informació, etc.). |
-
 ||<p>Una petició suporta un nombre variable de sol·licituds de consum d’un producte i  modalitat  de  consum  determinada.  A  les  sol·licituds  s’indica  la  informació específica requerida pel consum del producte / modalitat. </p><p>Si usem el frontal síncron estem demanat que el sistema contesti la nostra petició amb els resultats de la mateixa.  </p><p>Si usem el frontal asíncron estem demanant al sistema que ens respongui amb una confirmació de petició i el temps estimat de resposta. </p>|
-| :- | - |
 |Frontals PCI |Webservice síncron i webservice asíncron. |
-2. **Confirmació petició** 
 
-
+### Confirmació petició
 
 |*Característica* |*Descripció* |
 | - | - |
 |Sentit |PCI à Organisme requeridor |
 |Contingut |En  aquest  missatge  PCI  indica  a  l’organisme  requeridor  el  temps  estimat  de resposta a la seva petició. |
 |Frontals PCI |Webservice asíncron. |
-3. **Sol·licitud de resposta per a una petició** 
 
-
+### Sol·licitud de resposta per a una petició
 
 |*Característica* |*Descripció* |
 | - | - |
 |Sentit |Organisme requeridor à PCI |
 |Contingut |<p>El missatge conté tota la informació necessària per identificar la petició original. Es fa ús d’aquest missatge per demanar a la plataforma la entrega de un resultat. </p><p>El missatge no inclou totes les respostes a les sol·licituds del missatge fins que tota la petició no es considera finalitzada. </p>|
 |Frontals PCI |Webservice asíncron. |
-4. **Resposta a una petició** 
 
-
+### Resposta a una petició
 
 |*Característica* |*Descripció* |
 | - | - |
 |Sentit |PCI  à Organisme requeridor |
 |Contingut |<p>Aquest missatge conté la informació de resposta a la petició generada. </p><p>A les dades específiques de les transmisions es dóna resposta a les sol·licituds realitzades. </p>|
 |Frontals PCI |Webservice síncron i webservice asíncron. |
-**4  Detall de la missatgeria** 
 
-1. **Petició síncrona / asíncrona** 
+# Detall de la missatgeria
+
+## Petició síncrona / asíncrona
 
 El missatge corresponent a una petició es divideix en dos grans blocs: 
 
 - *Atributos*: conté l’identificador de la petició, la informació que indica el producte i modalitat de consum a la que accedim així com en nom de quin òrgan i per a quina finalitat.  
 - *Solicitudes*:  conté  les  dades  de  les  diferents  sol·licituds  de  modalitats  de  consum  que  es consulten.  Sempre  cal  replicar  les  dades  de  producte,  modalitat,  òrgan  i  finalitat  en  cada sol·licitud.  
-1. **Estructura** 
+
+### Estructura
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.018.jpeg)
 
