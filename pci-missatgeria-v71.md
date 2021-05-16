@@ -307,111 +307,84 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Firma |Base64Binary |No |Signatura  detached  del fitxer adjunt. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Via |String |No |Entrada / Salida. |
 |Peticion/Solitudes/SolicitudTransm ision |DatosEspecificos |BLOC |No |Bloc únic. Conté les dades de  transmissió  que  es sol·licita  al  organisme emissor  i  que  té  relació específica  amb  el certificat  (modalitat  de consum)  que  s’està demanant.  |
+
 3. **Exemple de missatge** 
 
-<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion"> 
-
-<Atributos> 
-
-<IdPeticion>ID\_PETICIO\_SINC</IdPeticion> 
-
-<NumElementos>1</NumElementos> 
-
-<TimeStamp>2007-04-18 17:35:02.454</TimeStamp> 
-
-<Estado> 
-
-<CodigoEstado/> 
-
-<CodigoEstadoSecundario/> 
-
-<LiteralError/> <TiempoEstimadoRespuesta>0</TiempoEstimadoRespuesta> 
-
-</Estado> 
-
-<CodigoCertificado>RESIDENT</CodigoCertificado> <CodigoProducto>PADRO</CodigoProducto> 
-
-<DatosAutorizacion> 
-
-<IdentificadorSolicitante>CAOC</IdentificadorSolicitante> <NombreSolicitante>CAOC</NombreSolicitante> <Finalidad>FINALITAT</Finalidad> 
-
-</DatosAutorizacion> 
-
-<Emisor> 
-
-<NifEmisor>Q0801175A</NifEmisor> <NombreEmisor>CAOC</NombreEmisor> 
-
-</Emisor> 
-
-<IdSolicitanteOriginal>MAP</IdSolicitanteOriginal> <NomSolicitanteOriginal>MAP</NomSolicitanteOriginal> 
-
-<Funcionario> 
-
-<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario> <NifFuncionario>NIF</NifFuncionario> 
-
-<EMailFuncionario/> 
-
-</Funcionario> 
-
-</Atributos> <Solicitudes> 
-
-<SolicitudTransmision> <DatosGenericos> 
-
-<Emisor> 
-
-<NifEmisor>Q0801175A</NifEmisor> 
-
-<NombreEmisor>CAOC</NombreEmisor> 
-
-</Emisor> 
-
-<Solicitante> 
-
-<IdentificadorSolicitante>CAOC</IdentificadorSolicitante> <NombreSolicitante>CAOC</NombreSolicitante> <Finalidad>FINALITAT</Finalidad> 
-
-<Consentimiento>Si</Consentimiento> 
-
-<Funcionario> 
-
-<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario> <NifFuncionario>NIF</NifFuncionario> 
-
-<EMailFuncionario/> 
-
-</Funcionario> 
-
-</Solicitante> 
-
-<Titular> 
-
-<TipoDocumentacion>NIF</TipoDocumentacion> <Documentacion>99999999R</Documentacion> <NombreCompleto>Pere Parra Polser</NombreCompleto> <Nombre>Pere</Nombre> <Apellido1>Parra</Apellido1> <Apellido2>Polser</Apellido2> 
-
-</Titular> 
-
-<Transmision> 
-
-<CodigoCertificado>RESIDENT</CodigoCertificado> 
-
-<IdSolicitud>AOC00000000100373</IdSolicitud> 
-
-<IdTransmision>EXPEDIENT</IdTransmision> 
-
-<FechaGeneracion>18042007</FechaGeneracion> </Transmision> 
-
-</DatosGenericos> 
-
-<DatosEspecificos> 
-
-<ns1:peticionResidente xmlns:ns1="http://www.aocat.net/padro">           <ns1:numExpediente>NUM\_EXP</ns1:numExpediente> 
-
-<ns1:tipoDocumentacion>1</ns1:tipoDocumentacion> <ns1:documentacion>99999999R</ns1:documentacion> </ns1:peticionResidente> 
-
-</DatosEspecificos> 
-
-</SolicitudTransmision> 
-
-</Solicitudes> 
-
+```xml
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+	<Atributos> 
+		<IdPeticion>ID_PETICIO_SINC</IdPeticion> 
+		<NumElementos>1</NumElementos> 
+		<TimeStamp>2007-04-18 17:35:02.454</TimeStamp> 
+		<Estado> 
+			<CodigoEstado/>
+			<CodigoEstadoSecundario/>
+			<LiteralError/>
+			<TiempoEstimadoRespuesta>0</TiempoEstimadoRespuesta> 
+		</Estado> 
+		<CodigoCertificado>RESIDENT</CodigoCertificado>
+		<CodigoProducto>PADRO</CodigoProducto>
+		<DatosAutorizacion> 
+			<IdentificadorSolicitante>CAOC</IdentificadorSolicitante>
+			<NombreSolicitante>CAOC</NombreSolicitante>
+			<Finalidad>FINALITAT</Finalidad> 
+		</DatosAutorizacion>
+		<Emisor> 
+			<NifEmisor>Q0801175A</NifEmisor>
+			<NombreEmisor>CAOC</NombreEmisor> 
+		</Emisor>
+		<IdSolicitanteOriginal>MAP</IdSolicitanteOriginal>
+		<NomSolicitanteOriginal>MAP</NomSolicitanteOriginal> 
+		<Funcionario> 
+			<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+			<NifFuncionario>NIF</NifFuncionario> 
+			<EMailFuncionario/> 
+		</Funcionario> 
+	</Atributos>
+	<Solicitudes> 
+		<SolicitudTransmision>
+			<DatosGenericos> 
+				<Emisor> 
+					<NifEmisor>Q0801175A</NifEmisor> 
+					<NombreEmisor>CAOC</NombreEmisor> 
+				</Emisor> 
+				<Solicitante> 
+					<IdentificadorSolicitante>CAOC</IdentificadorSolicitante>
+					<NombreSolicitante>CAOC</NombreSolicitante>
+					<Finalidad>FINALITAT</Finalidad> 
+					<Consentimiento>Si</Consentimiento> 
+					<Funcionario> 
+						<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+						<NifFuncionario>NIF</NifFuncionario> 
+						<EMailFuncionario/> 
+					</Funcionario> 
+				</Solicitante> 
+				<Titular> 
+					<TipoDocumentacion>NIF</TipoDocumentacion>
+					<Documentacion>99999999R</Documentacion>
+					<NombreCompleto>Pere Parra Polser</NombreCompleto>
+					<Nombre>Pere</Nombre>
+					<Apellido1>Parra</Apellido1>
+					<Apellido2>Polser</Apellido2> 
+				</Titular> 
+				<Transmision> 
+					<CodigoCertificado>RESIDENT</CodigoCertificado> 
+					<IdSolicitud>AOC00000000100373</IdSolicitud> 
+					<IdTransmision>EXPEDIENT</IdTransmision> 
+					<FechaGeneracion>18042007</FechaGeneracion>
+				</Transmision> 
+			</DatosGenericos> 
+			<DatosEspecificos> 
+				<ns1:peticionResidente xmlns:ns1="http://www.aocat.net/padro">
+					<ns1:numExpediente>NUM_EXP</ns1:numExpediente> 
+					<ns1:tipoDocumentacion>1</ns1:tipoDocumentacion>
+					<ns1:documentacion>99999999R</ns1:documentacion>
+				</ns1:peticionResidente> 
+			</DatosEspecificos> 
+		</SolicitudTransmision> 
+	</Solicitudes> 
 </Peticion> 
+```
 
 2. **Confirmació petició** 
 1. **Estructura** 
@@ -438,46 +411,38 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |ConfirmacionPeticion/Atributos |CodigoProducto |String |Si |Torna buit. |
 3. **Exemple de missatge** 
 
+```xml
 <con:ConfirmacionPeticion xmlns:con="http://gencat.net/scsp/esquemes/confirmacionPeticion"> 
+	<con:Atributos> 
+		<con:IdPeticion>ID_PETICIO_ASINC</con:IdPeticion> 
+		<con:NumElementos>1</con:NumElementos> 
+		<con:TimeStamp>2007-04-18 17:35:02.454</con:TimeStamp> 
+		<con:Estado> 
+			<con:CodigoEstado>0001</con:CodigoEstado> 
+			<con:CodigoEstadoSecundario/> 
+			<con:LiteralError/> 
+			<con:TiempoEstimadoRespuesta>1</con:TiempoEstimadoRespuesta> 
+		</con:Estado> 
+		<con:CodigoCertificado>RESIDENT</con:CodigoCertificado> 
+		<con:CodigoProducto>PADRO</con:CodigoProducto> 
+		<con:Emisor> 
+			<con:NifEmisor>Q0801175A</con:NifEmisor>
+			<con:NombreEmisor>CAOC</con:NombreEmisor> 
+		</con:Emisor> 
+		<con:IdSolicitanteOriginal>MAP</con:IdSolicitanteOriginal>
+		<con:NomSolicitanteOriginal>MAP</con:NomSolicitanteOriginal> 
+		<con:Funcionario> 
+			<con:NombreCompletoFuncionario>FUNCIONARIO</con:NombreCompletoFuncionario> 
+			<con:NifFuncionario>NIF</con:NifFuncionario> 
+			<con:EMailFuncionario/> 
+		</con:Funcionario> 
+	</con:Atributos> 
+</con:ConfirmacionPeticion>
+```
 
-<con:Atributos> 
+## Sol·licitud resposta
 
-<con:IdPeticion>ID\_PETICIO\_ASINC</con:IdPeticion> <con:NumElementos>1</con:NumElementos> 
-
-<con:TimeStamp>2007-04-18 17:35:02.454</con:TimeStamp> 
-
-<con:Estado> 
-
-<con:CodigoEstado>0001</con:CodigoEstado> 
-
-<con:CodigoEstadoSecundario/> 
-
-<con:LiteralError/> 
-
-<con:TiempoEstimadoRespuesta>1</con:TiempoEstimadoRespuesta> </con:Estado> 
-
-<con:CodigoCertificado>RESIDENT</con:CodigoCertificado> <con:CodigoProducto>PADRO</con:CodigoProducto> 
-
-<con:Emisor> 
-
-<con:NifEmisor>Q0801175A</con:NifEmisor> <con:NombreEmisor>CAOC</con:NombreEmisor> 
-
-</con:Emisor> 
-
-<con:IdSolicitanteOriginal>MAP</con:IdSolicitanteOriginal> <con:NomSolicitanteOriginal>MAP</con:NomSolicitanteOriginal> 
-
-<con:Funcionario> 
-
-<con:NombreCompletoFuncionario>FUNCIONARIO</con:NombreCompletoFuncionario> <con:NifFuncionario>NIF</con:NifFuncionario> 
-
-<con:EMailFuncionario/> 
-
-</con:Funcionario> 
-
-</con:Atributos> </con:ConfirmacionPeticion> 
-
-3. **Sol·licitud resposta** 
-1. **Estructura** 
+### Estructura
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.021.jpeg)
 
