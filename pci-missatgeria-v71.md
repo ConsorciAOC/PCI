@@ -58,17 +58,17 @@
 1. [Autenticació .............................................................................................................................. 23](#_page27_x82.00_y150.04)
 1. [Autorització ............................................................................................................................... 23](#_page27_x82.00_y469.04)
 
-## Introducció
+# Introducció
 
 Aquest document detalla la missatgeria genèrica establerta pel consum de productes de la *Plataforma de  Col·laboració  Interadministrativa*  del  CAOC  (en  endavant  PCI)  i  presenta  els  requeriments  i procediments que cal realitzar a l’hora de consumir-los. 
 
 Aquest document complementa la documentació específica de qualsevol producte publicat a la PCI. 
 
-## Requeriments d’accés als serveis
+# Requeriments d’accés als serveis
 
 A  continuació  s’indiquen  els  requeriments  necessaris  per  tal  de  poder  consumir  els  productes d’interoperabilitat. 
 
-### Sol·licitud d’autorització
+## Sol·licitud d’autorització
 
 - Sol·licitar al CAOC l’autorització per accedir al producte i modalitat de consum que es desitja en nom de l’organisme requeridor del qual som responsables i per a les finalitats que motiven l’accés al producte. 
 
@@ -86,22 +86,21 @@ Un cop l’autorització es faci efectiva, s’informarà a l’organisme requer
 
 Tota petició destinada a la PCI via un frontal webservice està subjecte a la política de seguretat que es detalla en l’apartat[` `*5- Política de seguretat* ](#_page27_x82.00_y119.04)d’aquest document. 
 
-## URLs d’accés de producció
+### URLs d’accés de producció
 
-### Clúster d’interoperabilitat (IOP)
+#### Clúster d’interoperabilitat (IOP)
 
 |*Frontal síncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3.iop.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3.iop.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3.iop.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
 
-### Clúster d’aplicacions (APP)
+#### Clúster d’aplicacions (APP)
 
 |*Frontal síncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
@@ -113,80 +112,69 @@ Tota petició destinada a la PCI via un frontal webservice està subjecte a la p
 |*WSDL frontal asíncron* |https://serveis3.app.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3.app.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
 
-### Clúster d’eNOTUM (NT)
+#### Clúster d’eNOTUM (NT)
 
 |*Frontal síncron* |https://serveis3.nt.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3.nt.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3.nt.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3.nt.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3.nt.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3.nt.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
-3. **URLs d’accés de preproducció** 
-1. **Clúster d’interoperabilitat (IOP)** 
 
+### URLs d’accés de preproducció
 
+#### Clúster d’interoperabilitat (IOP)
 
 |*Frontal síncron* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3-pre.iop.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
-2. **Clúster d’aplicacions (APP)** 
 
-
+#### Clúster d’aplicacions (APP)
 
 |*Frontal síncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3-pre.app.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3-pre.app.aoc.cat/siri- proxy/services/AsincronResposta?wsdl |
-3. **Clúster d’eNOTUM (NT)** 
 
-
+#### Clúster d’eNOTUM (NT)
 
 |*Frontal síncron* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/Sincron |
 | - | - |
 |*Frontal asíncron* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/Asincron |
 |*Frontal asíncron-resposta* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/AsincronResposta |
 
-
 |*WSDL frontal síncron* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/Sincron?wsdl |
 | - | - |
 |*WSDL frontal asíncron* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/Asincron?wsdl |
 |*WSDL frontal asíncron-resposta* |https://serveis3-pre.nt.aoc.cat/siri-proxy/services/AsincronResposta?wsdl |
-**3  Frontals d’accés a la plataforma** 
 
-1. **Tipus de comunicació** 
+# Frontals d’accés a la plataforma
+
+## Tipus de comunicació
 
 Existeixen diferents mecanismes d’invocació a la plataforma PCI: frontal webservice síncron i frontal webservice asíncron. 
 
-1. **Frontal webservice síncron** 
+### Frontal webservice síncron
 
 Mitjançant  el  frontal  webservice  síncron,  l’enviament  de  la  petició  i  la  resolució  del  mateix s’estableixen en una única comunicació (petició-resposta). 
 
 En aquesta comunicació es defineixen dos missatges: *Peticion* i *Respuesta*. 
 
 PPCCII  :: ORORGANISGANISMMEE![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.016.png)
-
-FRFRONONTATALL RREEQUQUEERRIIDDOROR
-
-SSIINNCCRRONON
-
-PPetieticciionon ResRespupuesestata
 
 2. **Frontal webservice asíncron** 
 
