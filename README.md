@@ -1,5 +1,5 @@
 # PCI
-Documentació associada a la PCI del CAOC
+Documentació associada a la Plataforma de Col·laboració Interadministrativa del CAOC
 
 # Missatgeria
 
