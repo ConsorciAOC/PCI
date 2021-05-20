@@ -68,7 +68,7 @@ Un cop l’autorització es faci efectiva, s’informarà a l’organisme requer
 
 ### Política de seguretat
 
-Tota petició destinada a la PCI via un frontal webservice està subjecte a la política de seguretat que es detalla en l’apartat[` `*5- Política de seguretat* ](#_page27_x82.00_y119.04)d’aquest document. 
+Tota petició destinada a la PCI via un frontal webservice està subjecte a la política de seguretat que es detalla en l’apartat [*Política de seguretat*](#política-de-seguretat-1) d’aquest document. 
 
 ### URLs d’accés de producció
 
@@ -251,7 +251,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Peticion/Atributos/Emisor  |NombreEmisor |String |Si |Nom  o  raó  social  del emissor del servei. |
 |Peticion/Atributos/ |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la petició. |
 |Peticion/Atributos/Funcionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 |Peticion/Atributos/Funcionario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari. |
 |Peticion/Atributos/Funcionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. |
 |Peticion/Atributos/Funcionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del funcionari |
@@ -269,7 +268,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la sol·licitud. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante/F uncionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante/F uncionario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari. |
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante/F uncionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante/F uncionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del Funcionari |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos  |Transmision |BLOC |Si |Bloc únic. Conté les dades del certificat que es vol demanar. |
@@ -285,7 +283,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Contenido |Base64Binary |Si |Referència XOP al contingut de  l’adjunt  en transferència MTOM. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Id |String |Si |Identificador  del  fitxer adjunt. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Hash |Base64Binary |No |Hash del fitxer adjunt. |
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Firma |Base64Binary |No |Signatura  detached  del fitxer adjunt. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Via |String |No |Entrada / Salida. |
 |Peticion/Solitudes/SolicitudTransm ision |DatosEspecificos |BLOC |No |Bloc únic. Conté les dades de  transmissió  que  es sol·licita  al  organisme emissor  i  que  té  relació específica  amb  el certificat  (modalitat  de consum)  que  s’està demanant.  |
@@ -380,7 +377,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |ConfirmacionPeticion |Atributos |BLOC |Si |Bloc únic. Conté les dades de control, relatives a la petició.  |
 |ConfirmacionPeticion/Atributos |IdPeticion |String |Si |Identificador de petició. |
 |ConfirmacionPeticion/Atributos |NumElementos |String |Si |Torna buit. |
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 |ConfirmacionPeticion/Atributos |TimeStamp |String |Si |Torna buit. |
 |ConfirmacionPeticion/Atributos |Estado ||||
 |ConfirmacionPeticion/Atributos/Est ado |CodigoEstado |String |No |<p>Código d’error o estat. 0001: Pendent </p><p>0002: Procéssant-se 0003: Finalitzada 0502: Error </p>|
@@ -437,9 +433,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |SolicitudRespuesta /Atributos |TimeStamp |String |Si |<p>Data i hora del enviament del missatge. Format:  </p><p>AAAA-MM- DDThh:mm:ss.mmm±hh:mm </p>|
 |SolicitudRespuesta /Atributos |CodigoCertificado |String |Si |El codi del certificat al que  estem  accedint (Modalitat  de  Consum).  El mateix valor que va en la part de dades Genèriques de la sol·licitud. El defineix cada emissor. No pot haver- hi dos iguals. |
 |SolicitudRespuesta /Atributos |DatosAutoritzacion |BLOC |No |Bloc  únic  que  engloba  la informació  d’autorització del  missatge.  Bloc obligatori  per  superar l’autorització. |
-
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
-| - | - | - | - | - |
 |SolicitudRespuesta/Atributos/Datos Autoritzacion |IdentificadorSolicitante |String |Si |Codi  identificador  de l’organisme requeridor. |
 |SolicitudRespuesta/Atributos/Datos Autoritzacion |NombreSolicitante |String |Si |Nom  de  l’organisme requeridor. |
 |SolicitudRespuesta/Atributos/Datos Autoritzacion |Finalidad  |String |Si  |Finalitat  associada  al consum  del  producte  / modalitat de consum  de la petició. |
@@ -494,7 +487,7 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 
 ### Descripció de camps
 
-|**Ubicació** |**Nom** |**Tipus** |<p>**Re**</p><p>**q** </p>|**Descripció** |
+|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 | - | - | - | - | - |
 |Respuesta |Atributos |BLOC |Si |Bloc únic. Conté les dades de  control,  relatives  a tota  la  resposta  (n sol·licituds).  |
 |Respuesta/Atributos |IdPeticion |String |Si |Identificador de petició. |
@@ -512,7 +505,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Respuesta/Atributos/Emisor  |NombreEmisor |String |Si |Nom  o  raó  social  del emissor del servei. |
 |Respuesta/Atributos/ |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la petició. |
 |Respuesta/Atributos/Funcionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
-|**Ubicació** |**Nom** |**Tipus** |<p>**Re**</p><p>**q** </p>|**Descripció** |
 |Respuesta/Atributos/Funcionario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari. |
 |Respuesta/Atributos/Funcionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. |
 |Respuesta/Atributos/Funcionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del funcionari |
@@ -529,7 +521,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |Consentimiento |String |Si |<p>D’acord amb l’apartat 4 de l’article  15  del  RD 263/1996,  els  valors admesos son: </p><p>- Si </p><p>- Ley </p>|
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la sol·licitud. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante/ Funcionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
-|**Ubicació** |**Nom** |**Tipus** |<p>**Re**</p><p>**q** </p>|**Descripció** |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante/ Funcionario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante/ Funcionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante/ Funcionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del Funcionari |
@@ -545,7 +536,6 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |URLDescarga |String |Si |URL  de  descàrrega  del fitxer adjunt. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Contenido |Base64Binary |Si |N/A en resposta. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Id |String |Si |Identificador  del  fitxer adjunt. |
-|**Ubicació** |**Nom** |**Tipus** |<p>**Re**</p><p>**q** </p>|**Descripció** |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Hash |Base64Binary |No |Hash del fitxer adjunt. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Firma |Base64Binary |No |Signatura  detached  del fitxer adjunt. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Via |String |No |Entrada / Salida. |
@@ -634,7 +624,7 @@ Alguns serveis publicats a PCI permeten obtenir en la mateixa la resposta, en el
 - *Evidències*: missatge/s original/s rebuts dels emissors finals de dades.  
 - *PDF*: versió imprimible de la resposta en format PDF.  
 
-La generació del PDF requereix que s’informin les dades del funcionari / usuari que realitza la ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.024.png) consulta.  Així,  cal  informar  l’element Funcionario  del  bloc  de  dades  genèriques: /Peticion/Funcionario i //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario. ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.025.png)
+> :warning: La generació del PDF requereix que s’informin les dades del funcionari / usuari que realitza la consulta.  Així,  cal  informar  l'element `Funcionario`  del  bloc  de  dades  genèriques: `/Peticion/Funcionario` i `//SolicitudTransmision/DatosGenericos/Solicitante/Funcionario`.
 
 ### Estructura
 
@@ -648,9 +638,6 @@ La generació del PDF requereix que s’informin les dades del funcionari / usua
 | - | - | - | - | - |
 |Peticion/Solitudes/SolicitudTransmision/ DatosEspecificos |ExtensionesPeticion |BLOC |No |Bloc únic. Permet infomar en la petició  quines  de  les  dades addicionals es vol obtenir en la resposta. |
 |Peticion/Solitudes/SolicitudTransmision/ DatosEspecificos/ExtensionesPeticion |PDF |boolean |No |Permet  informar  que  es  desitja obtenir  la  resposta  en  format imprimible / PDF. |
-
-|**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
-| - | - | - | - | - |
 |Peticion/Solitudes/SolicitudTransmision/ DatosEspecificos/ExtensionesPeticion |Evidencia |boolean |No |Permet  informar  que  es  desitja obtenir  les  evidencies  de  la petició. |
 |Respuesta/Transmisiones/TransmisionDatos/ DatosEspecificos |ExtensionesRespuesta |BLOC |No |Bloc  únic.  Conté  les  dades addicionals  sol·licitades  en  la petició. |
 |Respuesta/Transmisiones/TransmisionDatos/ DatosEspecificos/ExtensionesRespuesta |PDF |Base64Binary |No |En  cas  d’existir-ne,  conté  la resposta en format imprimible / PDF  (peticions  síncrones  o asíncrones d’un element). |
@@ -714,11 +701,14 @@ Tota petició dirigida a la PCI via un frontal webservice:
 - Ha d’estar signada seguint l’estàndard WS-Security: signatura del cos i *timestamp* del missatge signat opcionalment. 
 - El *timestamp* ha d’ajustar-se a aquests formats: 
 
-yyyy-MM-dd'T'HH:mm:ss'Z' yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z' 
+	* `yyyy-MM-dd'T'HH:mm:ss'Z'`
 
-- La clau de signatura s'ha de referenciar amb **DirectReference** que implica incorporar el certificat dins del payload del missatge, al tag <BinarySecurityToken> de WSS. 
+	* `yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z'`
+
+- La clau de signatura s'ha de referenciar amb **DirectReference** que implica incorporar el certificat dins del payload del missatge, al tag `<BinarySecurityToken>` de WSS. 
 - El certificat amb el que es signa la petició ha de ser vàlid (la validació es realitza contra la plataforma  PSIS  de  CATCert),  ha  d’estar  autoritzat  a  la  plataforma  PCI  i  associat  al  codi d’organisme que realitza la petició (element IdentificadorSolicitante del missatge). 
 - En cas de consumir els serveis  que requereixen funcionalitats de transferència de fitxers  via MTOM,  les  peticions  no  s’han  de  signar  seguint  l’estàndard WS-Security.  En  aquest  cas,  la política  d’autenticació  es  realitza  presentant  el  certificat  a  l’hora  d’establir  el  canal  HTTPS. Anàlogament al cas anterior, el certificat a presentar ha de ser vàlid i ha d’estar autoritzat a la plataforma  PCI  (pot  ser  el  mateix  que  s’usa  per  signar  les  peticions  WS-Security  en  les integracions que no requereixen del suport MTOM d’enviament de fitxers adjunts). 
+
 ## Autorització
 
 Per  que  una  petició  sigui  autoritzada  en  la  plataforma  PCI  independentment  del  frontal  pel  qual s’accedeixi: 
