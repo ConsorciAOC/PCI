@@ -248,9 +248,7 @@ El missatge corresponent a una petició es divideix en dos grans blocs:
 
 En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’informa el missatge específic del producte i modalitat de consum a la que es vol accedir. 
 
-2. **Descripció de camps** 
-
-
+### Descripció de camps
 
 |**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 | - | - | - | - | - |
@@ -308,7 +306,7 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Ficheros/Fich ero |Via |String |No |Entrada / Salida. |
 |Peticion/Solitudes/SolicitudTransm ision |DatosEspecificos |BLOC |No |Bloc únic. Conté les dades de  transmissió  que  es sol·licita  al  organisme emissor  i  que  té  relació específica  amb  el certificat  (modalitat  de consum)  que  s’està demanant.  |
 
-3. **Exemple de missatge** 
+### Exemple de missatge
 
 ```xml
 <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
@@ -386,14 +384,12 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 </Peticion> 
 ```
 
-2. **Confirmació petició** 
-1. **Estructura** 
+## Confirmació petició
+### Estructura
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.020.jpeg)
 
-2. **Descripció de camps** 
-
-
+### Descripció de camps
 
 |**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 | - | - | - | - | - |
@@ -409,7 +405,8 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |ConfirmacionPeticion/Atributos/Est ado |TiempoEstimadoRespuesta |int |No |Detall del temps estimat de resposta (en hores). |
 |ConfirmacionPeticion/Atributos |CodigoCertificado |String |Si |Torna buit. |
 |ConfirmacionPeticion/Atributos |CodigoProducto |String |Si |Torna buit. |
-3. **Exemple de missatge** 
+
+### Exemple de missatge
 
 ```xml
 <con:ConfirmacionPeticion xmlns:con="http://gencat.net/scsp/esquemes/confirmacionPeticion"> 
@@ -446,9 +443,7 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.021.jpeg)
 
-2. **Descripció de camps** 
-
-
+### Descripció de camps
 
 |**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 | - | - | - | - | - |
@@ -473,60 +468,47 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |SolicitudRespuesta/Atributos/Funci onario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari. |
 |SolicitudRespuesta/Atributos/Funci onario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. |
 |SolicitudRespuesta/Atributos/Funci onario |CertificadoDigital |Base64Binar y |No |Certificat  Digital  del funcionari |
-3. **Exemple de missatge** 
 
+### Exemple de missatge
+
+```xml
 <SolicitudRespuesta xmlns="http://gencat.net/scsp/esquemes/solicitudRespuesta"> 
+	<Atributos> 
+		<IdPeticion>ID_PETICIO_ASINC</IdPeticion> 
+		<NumElementos>1</NumElementos> 
+		<TimeStamp>20070417 10:00:00</TimeStamp> 
+		<Estado/> 
+		<CodigoCertificado>RESIDENT</CodigoCertificado> 
+		<DatosAutorizacion> 
+			<IdentificadorSolicitante>CAOC</IdentificadorSolicitante>
+			<NombreSolicitante>CAOC</NombreSolicitante> 
+			<Finalidad>RMI</Finalidad> 
+		</DatosAutorizacion> 
+		<CodigoProducto>PADRO</CodigoProducto> 
+		<Emisor> 
+			<NifEmisor>1Q0801175A</NifEmisor> 
+			<NombreEmisor>AOC</NombreEmisor> 
+		</Emisor> 
+		<IdSolicitanteOriginal>CAOC</IdSolicitanteOriginal>
+		<NomSolicitanteOriginal>CAOC</NomSolicitanteOriginal> 
+		<Funcionario> 
+			<NombreCompletoFuncionario>CAOC</NombreCompletoFuncionario>
+			<NifFuncionario>11111111H</NifFuncionario>
+			<EMailFuncionario>aoc@aoc.cat</EMailFuncionario>
+			<CertificadoDigital>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</CertificadoDigital> 
+		</Funcionario>
+	</Atributos> 
+</SolicitudRespuesta>
+```
 
-<Atributos> 
-
-<IdPeticion>ID\_PETICIO\_ASINC</IdPeticion> 
-
-<NumElementos>1</NumElementos> 
-
-<TimeStamp>20070417 10:00:00</TimeStamp> 
-
-<Estado/> 
-
-<CodigoCertificado>RESIDENT</CodigoCertificado> 
-
-<DatosAutorizacion> 
-
-<IdentificadorSolicitante>CAOC</IdentificadorSolicitante> <NombreSolicitante>CAOC</NombreSolicitante> 
-
-<Finalidad>RMI</Finalidad> 
-
-</DatosAutorizacion> 
-
-<CodigoProducto>PADRO</CodigoProducto> 
-
-<Emisor> 
-
-<NifEmisor>1Q0801175A</NifEmisor> 
-
-<NombreEmisor>AOC</NombreEmisor> 
-
-</Emisor> 
-
-<IdSolicitanteOriginal>CAOC</IdSolicitanteOriginal> <NomSolicitanteOriginal>CAOC</NomSolicitanteOriginal> 
-
-<Funcionario> 
-
-<NombreCompletoFuncionario>CAOC</NombreCompletoFuncionario> <NifFuncionario>11111111H</NifFuncionario> <EMailFuncionario>aoc@aoc.cat</EMailFuncionario> <CertificadoDigital>UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</CertificadoDigital> 
-
-</Funcionario> </Atributos> 
-
-</SolicitudRespuesta 
-
-4. **Resposta** 
-1. **Estructura** 
+## Resposta
+### Estructura
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.022.jpeg)
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.023.jpeg)
 
-2. **Descripció de camps** 
-
-
+### Descripció de camps
 
 |**Ubicació** |**Nom** |**Tipus** |<p>**Re**</p><p>**q** </p>|**Descripció** |
 | - | - | - | - | - |
@@ -584,95 +566,84 @@ En l’schema anterior es ressalta l’element *DatosEspecificos,* on s’inform
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Firma |Base64Binary |No |Signatura  detached  del fitxer adjunt. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Ficheros/Fic hero |Via |String |No |Entrada / Salida. |
 |Respuesta/Transmisiones/Transmisio nDatos |DatosEspecificos |BLOC |No |Bloc únic. Conté les dades de transmissió de resposta proporcionades  per l’organisme  emissor  i  que té  relació  específica  amb el certificat (modalitat de consum) que s’ha demanat.  |
-3. **Exemple de missatge** 
 
+### Exemple de missatge
+
+```xml
 <res:Respuesta xmlns:res="http://gencat.net/scsp/esquemes/respuesta"> 
-
-<res:Atributos> 
-
-<res:CodigoCertificado>RESIDENT</res:CodigoCertificado> <res:CodigoProducto>PADRO</res:CodigoProducto> <res:IdPeticion>ID\_PETICIO\_SINC</res:IdPeticion> <res:IdSolicitanteOriginal>MAP</res:IdSolicitanteOriginal> <res:NomSolicitanteOriginal>MAP</res:NomSolicitanteOriginal> <res:NumElementos>1</res:NumElementos> <res:TimeStamp>2008-03-06T15:34:03.988+01:00</res:TimeStamp> <res:Emisor> 
-
-<res:NifEmisor>Q0801175A</res:NifEmisor> <res:NombreEmisor>CAOC</res:NombreEmisor> 
-
-</res:Emisor> 
-
-<res:Estado> 
-
-<res:CodigoEstado>0003</res:CodigoEstado> <res:CodigoEstadoSecundario/> <res:LiteralError>OK</res:LiteralError> <res:TiempoEstimadoRespuesta>0</res:TiempoEstimadoRespuesta> 
-
-</res:Estado> 
-
-<res:Funcionario> 
-
-<res:NombreCompletoFuncionario>FUNCIONARIO</res:NombreCompletoFuncionario> <res:NifFuncionario>NIF</res:NifFuncionario> 
-
-<res:EMailFuncionario/> 
-
-<res:CertificadoDigital/> 
-
-</res:Funcionario> 
-
-</res:Atributos> 
-
-<res:Transmisiones> 
-
-<res:TransmisionDatos> 
-
-<res:DatosGenericos> 
-
-<res:Emisor> 
-
-<res:NombreEmisor>CAOC</res:NombreEmisor> <res:NifEmisor>Q0801175A</res:NifEmisor> 
-
-</res:Emisor> 
-
-<res:Solicitante> 
-
-<res:IdentificadorSolicitante>CAOC</res:IdentificadorSolicitante> <res:NombreSolicitante>CAOC</res:NombreSolicitante> <res:Finalidad>FINALITAT</res:Finalidad> <res:Consentimiento>Si</res:Consentimiento> 
-
-<res:Funcionario>  <res:NombreCompletoFuncionario>FUNCIONARIO</res:NombreCompletoFuncionario> 
-
-<res:NifFuncionario>NIF</res:NifFuncionario> <res:EMailFuncionario/> 
-
-<res:CertificadoDigital/> 
-
-</res:Funcionario> </res:Solicitante> <res:Titular> 
-
-<res:TipoDocumentacion>NIF</res:TipoDocumentacion> <res:Documentacion>99999999R</res:Documentacion> <res:NombreCompleto>Pere Parra Polser</res:NombreCompleto> <res:Nombre>Pere</res:Nombre> <res:Apellido1>Parra</res:Apellido1> <res:Apellido2>Polser</res:Apellido2> 
-
-</res:Titular> <res:Transmision> 
-
-<res:CodigoCertificado>RESIDENT</res:CodigoCertificado> 
-
-<res:FechaGeneracion>18042007</res:FechaGeneracion> 
-
-<res:IdSolicitud>AOC00000000100373</res:IdSolicitud> 
-
-<res:IdTransmision>EXPEDIENT</res:IdTransmision> </res:Transmision> 
-
-</res:DatosGenericos> 
-
-<res:DatosEspecificos> 
-
-<pad:respuestaResidente xmlns:pad="http://www.aocat.net/padro"> 
-
-<pad:numExpediente>NUM\_EXP</pad:numExpediente> 
-
-<pad:tipoDocumentacion>1</pad:tipoDocumentacion> 
-
-<pad:documentacion>99999999R</pad:documentacion> 
-
-<pad:codigoResultado>1</pad:codigoResultado> </pad:respuestaResidente> 
-
-</res:DatosEspecificos> 
-
-</res:TransmisionDatos> 
-
-</res:Transmisiones> 
-
+	<res:Atributos> 
+		<res:CodigoCertificado>RESIDENT</res:CodigoCertificado>
+		<res:CodigoProducto>PADRO</res:CodigoProducto>
+		<res:IdPeticion>ID_PETICIO_SINC</res:IdPeticion>
+		<res:IdSolicitanteOriginal>MAP</res:IdSolicitanteOriginal>
+		<res:NomSolicitanteOriginal>MAP</res:NomSolicitanteOriginal>
+		<res:NumElementos>1</res:NumElementos>
+		<res:TimeStamp>2008-03-06T15:34:03.988+01:00</res:TimeStamp>
+		<res:Emisor> 
+			<res:NifEmisor>Q0801175A</res:NifEmisor>
+			<res:NombreEmisor>CAOC</res:NombreEmisor> 
+		</res:Emisor> 
+		<res:Estado> 
+			<res:CodigoEstado>0003</res:CodigoEstado>
+			<res:CodigoEstadoSecundario/>
+			<res:LiteralError>OK</res:LiteralError>
+			<res:TiempoEstimadoRespuesta>0</res:TiempoEstimadoRespuesta> 
+		</res:Estado> 
+		<res:Funcionario> 
+			<res:NombreCompletoFuncionario>FUNCIONARIO</res:NombreCompletoFuncionario>
+			<res:NifFuncionario>NIF</res:NifFuncionario> 
+			<res:EMailFuncionario/> 
+			<res:CertificadoDigital/> 
+		</res:Funcionario> 
+	</res:Atributos> 
+	<res:Transmisiones> 
+		<res:TransmisionDatos> 
+			<res:DatosGenericos> 
+				<res:Emisor> 
+					<res:NombreEmisor>CAOC</res:NombreEmisor>
+					<res:NifEmisor>Q0801175A</res:NifEmisor> 
+				</res:Emisor> 
+				<res:Solicitante> 
+					<res:IdentificadorSolicitante>CAOC</res:IdentificadorSolicitante>
+					<res:NombreSolicitante>CAOC</res:NombreSolicitante>
+					<res:Finalidad>FINALITAT</res:Finalidad>
+					<res:Consentimiento>Si</res:Consentimiento> 
+					<res:Funcionario>
+						<res:NombreCompletoFuncionario>FUNCIONARIO</res:NombreCompletoFuncionario> 
+						<res:NifFuncionario>NIF</res:NifFuncionario>
+						<res:EMailFuncionario/> 
+						<res:CertificadoDigital/> 
+					</res:Funcionario>
+				</res:Solicitante>
+				<res:Titular> 
+					<res:TipoDocumentacion>NIF</res:TipoDocumentacion>
+					<res:Documentacion>99999999R</res:Documentacion>
+					<res:NombreCompleto>Pere Parra Polser</res:NombreCompleto>
+					<res:Nombre>Pere</res:Nombre>
+					<res:Apellido1>Parra</res:Apellido1>
+					<res:Apellido2>Polser</res:Apellido2> 
+				</res:Titular>
+				<res:Transmision> 
+					<res:CodigoCertificado>RESIDENT</res:CodigoCertificado> 
+					<res:FechaGeneracion>18042007</res:FechaGeneracion> 
+					<res:IdSolicitud>AOC00000000100373</res:IdSolicitud> 
+					<res:IdTransmision>EXPEDIENT</res:IdTransmision>
+				</res:Transmision> 
+			</res:DatosGenericos> 
+			<res:DatosEspecificos> 
+				<pad:respuestaResidente xmlns:pad="http://www.aocat.net/padro"> 
+					<pad:numExpediente>NUM_EXP</pad:numExpediente> 
+					<pad:tipoDocumentacion>1</pad:tipoDocumentacion> 
+					<pad:documentacion>99999999R</pad:documentacion> 
+					<pad:codigoResultado>1</pad:codigoResultado>
+				</pad:respuestaResidente> 
+			</res:DatosEspecificos> 
+		</res:TransmisionDatos> 
+	</res:Transmisiones> 
 </res:Respuesta> 
+```
 
-5. **Extensions de missatgeria** 
+## Extensions de missatgeria
 
 Alguns serveis publicats a PCI permeten obtenir en la mateixa la resposta, en el bloc de dades específiques, la següent informació addicional: 
 
@@ -681,15 +652,13 @@ Alguns serveis publicats a PCI permeten obtenir en la mateixa la resposta, en el
 
 La generació del PDF requereix que s’informin les dades del funcionari / usuari que realitza la ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.024.png) consulta.  Així,  cal  informar  l’element Funcionario  del  bloc  de  dades  genèriques: /Peticion/Funcionario i //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario. ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.025.png)
 
-1. **Estructura** 
+### Estructura
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.026.png)
 
 ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.027.png)
 
-2. **Descripció de camps** 
-
-
+### Descripció de camps
 
 |**Ubicació** |**Nom** |**Tipus** |**Req** |**Descripció** |
 | - | - | - | - | - |
@@ -703,79 +672,58 @@ La generació del PDF requereix que s’informin les dades del funcionari / usua
 |Respuesta/Transmisiones/TransmisionDatos/ DatosEspecificos/ExtensionesRespuesta |PDF |Base64Binary |No |En  cas  d’existir-ne,  conté  la resposta en format imprimible / PDF  (peticions  síncrones  o asíncrones d’un element). |
 |Respuesta/Transmisiones/TransmisionDatos/ DatosEspecificos/ExtensionesRespuesta |PDFGuid |String |No |En cas d’existir-ne, conté el CSV de  la  resposta  en  format imprimible  /  PDF  (lots)  si  el requeridor té DESA’L activat. |
 |Respuesta/Transmisiones/TransmisionDatos/ DatosEspecificos/ExtensionesRespuesta |Evidencia |Base64Binary |No |En  cas  d’existir-ne,  conté  les evidències (peticions síncrones o asíncrones d’un element). |
-3. **Exemple de missatge** 
 
+### Exemple de missatge
+
+```xml
 (. . .) 
-
 </DatosGenericos> 
-
 <DatosEspecificos> 
-
-<caoc:ExtensionesPeticion xmlns:caoc="http://www.aocat.net/scsp/esquemes/caoc-extensions"> 
-
-<caoc:PDF>true</caoc:PDF> 
-
-<caoc:Evidencia>true</caoc:Evidencia> 
-
-</caoc:ExtensionesPeticion> 
-
-<ns1:peticionDatosTitular xmlns:ns1="http://www.aocat.net/padro"> 
-
-<ns1:numExpediente>NUM\_EXP</ns1:numExpediente> <ns1:tipoDocumentacion>1</ns1:tipoDocumentacion> <ns1:documentacion>99999999R</ns1:documentacion> <ns1:codigoMunicipio>019</ns1:codigoMunicipio> <ns1:codigoProvincia>08</ns1:codigoProvincia> 
-
-<ns1:idescat>1</ns1:idescat> 
-
-</ns1:peticionDatosTitular> 
-
+	<caoc:ExtensionesPeticion xmlns:caoc="http://www.aocat.net/scsp/esquemes/caoc-extensions"> 
+		<caoc:PDF>true</caoc:PDF> 
+		<caoc:Evidencia>true</caoc:Evidencia> 
+	</caoc:ExtensionesPeticion> 
+	<ns1:peticionDatosTitular xmlns:ns1="http://www.aocat.net/padro"> 
+		<ns1:numExpediente>NUM\_EXP</ns1:numExpediente>
+		<ns1:tipoDocumentacion>1</ns1:tipoDocumentacion>
+		<ns1:documentacion>99999999R</ns1:documentacion>
+		<ns1:codigoMunicipio>019</ns1:codigoMunicipio>
+		<ns1:codigoProvincia>08</ns1:codigoProvincia> 
+		<ns1:idescat>1</ns1:idescat> 
+	</ns1:peticionDatosTitular> 
 </DatosEspecificos> 
-
 </SolicitudTransmision> 
-
-`    `</Solicitudes> 
-
+</Solicitudes> 
 </Peticion> 
-
 (. . .) 
-
 </res:DatosGenericos> 
-
 <res:DatosEspecificos> 
+	<caoc:ExtensionesRespuesta xmlns:caoc="http://www.aocat.net/scsp/esquemes/caoc-extensions">
+		<caoc:PDF>JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PC9MZW5ndGggNiAwIFIvRmlsdGVyIC9GbGDycfTD6cfDD 
+		(. . .) 
+		NjQ+XQo+PgpzdGFydHhyZWYKMTIzNzMKJSVFT0YK</caoc:PDF> 
+		<caoc:Evidencia>PGFvYzpSZXNwdWVzdGFWb2xhbnRlIElkUGV0aWNpb249IkFPQ01USSIgeG1sbnM6bn 
+		(. . .) 
+		ZW150ZT4=</caoc:Evidencia> 
+	</caoc:ExtensionesRespuesta> 
+	<aoc:respuestaDatosTitular xmlns:aoc="http://www.aocat.net/padro" xmlns:volante="http://www.red.es/padron"> 
+		<aoc:numExpediente>NUM_EXP</aoc:numExpediente>
+		<aoc:tipoDocumentacion>1</aoc:tipoDocumentacion>
+		<aoc:documentacion>99999999R</aoc:documentacion>
+		<aoc:codigoMunicipio>019</aoc:codigoMunicipio>
+		<aoc:codigoProvincia>08</aoc:codigoProvincia>
+		<aoc:codigoResultado>1</aoc:codigoResultado> 
+		(. . .) 
+	</aoc:respuestaDatosTitular>
+</res:DatosEspecificos> 
+</res:TransmisionDatos> 
+</res:Transmisiones> 
+</res:Respuesta>
+```
 
-`    `<caoc:ExtensionesRespuesta xmlns:caoc="http://www.aocat.net/scsp/esquemes/caoc-extensions"> <caoc:PDF>JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PC9MZW5ndGggNiAwIFIvRmlsdGVyIC9GbGDycfTD6cfDD 
+# Política de seguretat
 
-`                    `(. . .) 
-
-`                    `5cFfkg18b9Da4JWnsbOTJBNjU0QzMxN0RBMDE3MEM2ND48QjkzNUNENzM1OUJCQzkyQTY1NEMzMTdEQTAxNzBD                     NjQ+XQo+PgpzdGFydHhyZWYKMTIzNzMKJSVFT0YK</caoc:PDF> 
-
-<caoc:Evidencia>PGFvYzpSZXNwdWVzdGFWb2xhbnRlIElkUGV0aWNpb249IkFPQ01USSIgeG1sbnM6bn 
-
-`                    `(. . .) 
-
-`                    `M9Imh0dHA6Ly93d3cuYW9jYXQubmV0L3ZvbGFudHMiIHhtbG5zOlNPQVAtRU5WPSJodHRwOi8vc2No 
-
-`                    `ZW150ZT4=</caoc:Evidencia> 
-
-`    `</caoc:ExtensionesRespuesta> 
-
-`    `<aoc:respuestaDatosTitular xmlns:aoc="http://www.aocat.net/padro"   
-
-`                                         `xmlns:volante="http://www.red.es/padron"> 
-
-<aoc:numExpediente>NUM\_EXP</aoc:numExpediente> <aoc:tipoDocumentacion>1</aoc:tipoDocumentacion> <aoc:documentacion>99999999R</aoc:documentacion> <aoc:codigoMunicipio>019</aoc:codigoMunicipio> <aoc:codigoProvincia>08</aoc:codigoProvincia> <aoc:codigoResultado>1</aoc:codigoResultado> 
-
-`                    `(. . .) 
-
-`    `</aoc:respuestaDatosTitular> </res:DatosEspecificos> 
-
-`      `</res:TransmisionDatos> 
-
-`   `</res:Transmisiones> 
-
-</res:Respuesta> 
-
-**5  Política de seguretat**  
-
-1. **Autenticació** 
+## Autenticació
 
 Tota petició dirigida a la PCI via un frontal webservice: 
 
@@ -787,7 +735,7 @@ yyyy-MM-dd'T'HH:mm:ss'Z' yyyy-MM-dd'T'HH:mm:ss'.'SSS'Z'
 - La clau de signatura s'ha de referenciar amb **DirectReference** que implica incorporar el certificat dins del payload del missatge, al tag <BinarySecurityToken> de WSS. 
 - El certificat amb el que es signa la petició ha de ser vàlid (la validació es realitza contra la plataforma  PSIS  de  CATCert),  ha  d’estar  autoritzat  a  la  plataforma  PCI  i  associat  al  codi d’organisme que realitza la petició (element IdentificadorSolicitante del missatge). 
 - En cas de consumir els serveis  que requereixen funcionalitats de transferència de fitxers  via MTOM,  les  peticions  no  s’han  de  signar  seguint  l’estàndard WS-Security.  En  aquest  cas,  la política  d’autenticació  es  realitza  presentant  el  certificat  a  l’hora  d’establir  el  canal  HTTPS. Anàlogament al cas anterior, el certificat a presentar ha de ser vàlid i ha d’estar autoritzat a la plataforma  PCI  (pot  ser  el  mateix  que  s’usa  per  signar  les  peticions  WS-Security  en  les integracions que no requereixen del suport MTOM d’enviament de fitxers adjunts). 
-2. **Autorització** 
+## Autorització
 
 Per  que  una  petició  sigui  autoritzada  en  la  plataforma  PCI  independentment  del  frontal  pel  qual s’accedeixi: 
 
@@ -795,217 +743,123 @@ Per  que  una  petició  sigui  autoritzada  en  la  plataforma  PCI  independen
 - L’organisme  que  realitza  la  petició  ha  d’estar  autoritzat  a  executar  peticions  del  producte, modalitat de consum i finalitat sol·licitada. 
 - Aquests criteris d’autorització també apliquen a les diferents sol·licituds de la petició. 
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?> 
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> 
+	<soapenv:Header> 
+		<wsse:Security 
+xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+soapenv:mustUnderstand="1"> 
+			<wsse:BinarySecurityToken  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"  
+			EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" 
+			ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" 
+			wsu:Id="CertId-79272702">MIIHozCCBougAwIBAgIQWpB6BssmhbBDYL8dNS8awjANBgkqhkiG9w0BAQUF 
+			...
+			E0MDIGA1UECxMrU2VjcmV0YXJpYSBkJ0FkbWluaXN0cmFjaW8gaSBGdW5jaW8gUHVibGljYTEQMA4GA1UEAxM
+			</wsse:BinarySecurityToken> 
+			<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2026549"> 
+				<ds:SignedInfo> 
+					<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /> 
+					<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /> 
+					<ds:Reference URI="#id-30362156"> 
+						<ds:Transforms> 
+							<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+						</ds:Transforms> 
+						<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+						<ds:DigestValue>RT4FftCDrvm43ANZ++W1vdOcxiY=</ds:DigestValue> 
+					</ds:Reference> 
+				</ds:SignedInfo> 
+				<ds:SignatureValue>Pblc2okiV65SO+5UoxS4hpiTqSd...4sE3xGRx2y3qYPGoPhniIpMh7J9UKSgpiA=</ds:SignatureValue> 
+				<ds:KeyInfo Id="KeyId-27337877"> 
+					<wsse:SecurityTokenReference  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401- wss-wssecurity-utility-1.0.xsd" wsu:Id="STRId-28591825"> 
+						<wsse:Reference  URI="#CertId-79272702"  ValueType="http://docs.oasis- open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" /> 
+					</wsse:SecurityTokenReference> 
+				</ds:KeyInfo> 
+			</ds:Signature> 
+			<wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility- 1.0.xsd" wsu:Id="Timestamp-13059051"> 
+				<wsu:Created>2008-01-15T17:00:02.177Z</wsu:Created> 
+				<wsu:Expires>2008-01-15T17:05:02.177Z</wsu:Expires> 
+			</wsu:Timestamp> 
+		</wsse:Security> 
+	</soapenv:Header> 
+	<soapenv:Body  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility- 1.0.xsd" wsu:Id="id-30362156"> 
+		<procesa xmlns="http://www.openuri.org/"> 
+			<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion"> 
+				<Atributos> 
+					<IdPeticion>CAOC00000001</IdPeticion> 
+					<NumElementos>1</NumElementos>  
+					<TimeStamp>2007-04-18 17:35:02.454</TimeStamp> 
+					<Estado> 
+						<CodigoEstado />  
+						<CodigoEstadoSecundario />  
+						<LiteralError />  
+						<TiempoEstimadoRespuesta>0</TiempoEstimadoRespuesta> 
+					</Estado>  
+					<CodigoCertificado>TITULAR</CodigoCertificado> 
+					<CodigoProducto>PADRO</CodigoProducto> 
+					<DatosAutorizacion>  
+						<IdentificadorSolicitante>PICA</IdentificadorSolicitante>  
+						<NombreSolicitante>PICA</NombreSolicitante> 
+						<Finalidad>TEST</Finalidad>  
+					</DatosAutorizacion>  
+					<Emisor> 
+						<NifEmisor>Q0801175A</NifEmisor> 
+						<NombreEmisor>CAOC</NombreEmisor> 
+					</Emisor>  
+					<Funcionario> 
+						<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>  
+						<NifFuncionario>NIF</NifFuncionario>  
+						<EMailFuncionario /> 
+					</Funcionario> 
+				</Atributos>  
+				<Solicitudes>  
+					<SolicitudTransmision> 
+						<DatosGenericos>  
+							<Emisor> 
+								<NifEmisor>Q0801175A</NifEmisor> 
+								<NombreEmisor>CAOC</NombreEmisor> 
+							</Emisor> 
+							<Solicitante>  
+								<IdentificadorSolicitante>PICA</IdentificadorSolicitante> 
+								<NombreSolicitante>PICA</NombreSolicitante> 
+								<Finalidad>FINALITAT</Finalidad> 
+								<Consentimiento>Si</Consentimiento> 
+								<Funcionario> 
+									<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>
+									<NifFuncionario>NIF</NifFuncionario> 
+									<EMailFuncionario /> 
+								</Funcionario> 
+							</Solicitante>  
+							<Titular> 
+								<TipoDocumentacion>NIF</TipoDocumentacion> 
+								<Documentacion>99999999R</Documentacion>  
+								<NombreCompleto>Pere Parra Polser</NombreCompleto>  
+								<Nombre>Pere</Nombre>  
+								<Apellido1>Parra</Apellido1> 
+								<Apellido2>Polser</Apellido2> 
+							</Titular> 
+							<Transmision>  
+								<CodigoCertificado>TITULAR</CodigoCertificado> 
+								<IdSolicitud>AOC00000000100373</IdSolicitud> 
+								<IdTransmision>EXPEDIENT</IdTransmision>  
+								<FechaGeneracion>18042007</FechaGeneracion> 
+							</Transmision>  
+						</DatosGenericos>  
+						<DatosEspecificos>  
+							<ns1:peticionDatosTitular xmlns:ns1="http://www.aocat.net/padro"> 
+								<ns1:tipoDocumentacion>1</ns1:tipoDocumentacion> 
+								<ns1:documentacion>99999999R</ns1:documentacion> 
+								<ns1:codigoMunicipio>019</ns1:codigoMunicipio> 
+								<ns1:codigoProvincia>08</ns1:codigoProvincia>
+								<ns1:idescat>1</ns1:idescat>
+							</ns1:peticionDatosTitular> 
+						</DatosEspecificos> 
+					</SolicitudTransmision> 
+				</Solicitudes>  
+			</Peticion> 
+		</procesa> 
+	</soapenv:Body> 
+</soapenv:Envelope> 
+```
 
-`   `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> 
-
-`      `<soapenv:Header> 
-
-`         `<wsse:Security 
-
-`           `xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
-
-`           `soapenv:mustUnderstand="1"> 
-
-`            `<wsse:BinarySecurityToken  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss- wssecurity-utility-1.0.xsd"  EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" wsu:Id="CertId-79272702">MIIHozCCBougAwIBAgIQWpB6BssmhbBDYL8dNS8awjANBgkqhkiG9w0BAQUF 
-
-(. . .) 
-
-E0MDIGA1UECxMrU2VjcmV0YXJpYSBkJ0FkbWluaXN0cmFjaW8gaSBGdW5jaW8gUHVibGljYTEQMA4GA1UEAxMHRUMtU0FGUDA yBpIFNpc3RlbWVzMS4wLAYDVQQLEyVTZXJ2ZWlzIFB1YmxpY3MgZGUgQ2VydGlmaWNhY2lvIENEQS0xMTYwNAYDVQQLEy1WZW bwSfup0z1yTD7FhBCoXYVJyouIDAtBYjfHrYzaJXi/oGJlnFhUQ8nwkmIB9IsRTUY9xDqU+d</wsse:BinarySecurityToken> 
-
-`            `<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-2026549"> 
-
-`               `<ds:SignedInfo> 
-
-`                  `<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /> 
-
-`                  `<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /> 
-
-`                  `<ds:Reference URI="#id-30362156"> 
-
-`                     `<ds:Transforms> 
-
-`                        `<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />                      </ds:Transforms> 
-
-`                     `<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />                      <ds:DigestValue>RT4FftCDrvm43ANZ++W1vdOcxiY=</ds:DigestValue> 
-
-`                  `</ds:Reference> 
-
-`               `</ds:SignedInfo> 
-
-<ds:SignatureValue>Pblc2okiV65SO+5UoxS4hpiTqSdfrsyjYdEngX6fFVWyM/qEmXSNhA57mkczNuHkUDIe64MwY+uxLUy0GO1g5hHb                4sE3xGRx2y3qYPGoPhniIpMh7J9UKSgpiA=</ds:SignatureValue> 
-
-`               `<ds:KeyInfo Id="KeyId-27337877"> 
-
-`                  `<wsse:SecurityTokenReference  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401- wss-wssecurity-utility-1.0.xsd" wsu:Id="STRId-28591825"> 
-
-`                     `<wsse:Reference  URI="#CertId-79272702"  ValueType="http://docs.oasis- open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" /> 
-
-`                  `</wsse:SecurityTokenReference> 
-
-`               `</ds:KeyInfo> 
-
-`            `</ds:Signature> 
-
-`            `<wsu:Timestamp xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility- 1.0.xsd" wsu:Id="Timestamp-13059051"> 
-
-`               `<wsu:Created>2008-01-15T17:00:02.177Z</wsu:Created> 
-
-`               `<wsu:Expires>2008-01-15T17:05:02.177Z</wsu:Expires> 
-
-`            `</wsu:Timestamp> 
-
-`         `</wsse:Security> 
-
-`      `</soapenv:Header> 
-
-`      `<soapenv:Body  xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility- 1.0.xsd" wsu:Id="id-30362156"> 
-
-`         `<procesa xmlns="http://www.openuri.org/"> 
-
-`            `<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion"> 
-
-`               `<Atributos> 
-
-`                  `<IdPeticion>CAOC00000001</IdPeticion> 
-
-`                  `<NumElementos>1</NumElementos>  
-
-`                  `<TimeStamp>2007-04-18 17:35:02.454</TimeStamp> 
-
-`                  `<Estado> 
-
-`                     `<CodigoEstado />  
-
-`                     `<CodigoEstadoSecundario />  
-
-`                     `<LiteralError />  
-
-`                     `<TiempoEstimadoRespuesta>0</TiempoEstimadoRespuesta> 
-
-`                  `</Estado>  
-
-`                  `<CodigoCertificado>TITULAR</CodigoCertificado> 
-
-`                  `<CodigoProducto>PADRO</CodigoProducto> 
-
-`                  `<DatosAutorizacion>  
-
-`                     `<IdentificadorSolicitante>PICA</IdentificadorSolicitante>  
-
-`                     `<NombreSolicitante>PICA</NombreSolicitante> 
-
-`                     `<Finalidad>TEST</Finalidad>  
-
-`                  `</DatosAutorizacion>  
-
-`                  `<Emisor> 
-
-`                     `<NifEmisor>Q0801175A</NifEmisor> 
-
-`                     `<NombreEmisor>CAOC</NombreEmisor> 
-
-`                  `</Emisor>  
-
-`                  `<Funcionario> 
-
-`                     `<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>  
-
-`                     `<NifFuncionario>NIF</NifFuncionario>  
-
-`                     `<EMailFuncionario /> 
-
-`                  `</Funcionario> 
-
-`               `</Atributos>  
-
-`               `<Solicitudes>  
-
-`                  `<SolicitudTransmision> 
-
-`                     `<DatosGenericos>  
-
-`                        `<Emisor> 
-
-`                           `<NifEmisor>Q0801175A</NifEmisor> 
-
-`                           `<NombreEmisor>CAOC</NombreEmisor> 
-
-`                        `</Emisor> 
-
-`                        `<Solicitante>  
-
-`                           `<IdentificadorSolicitante>PICA</IdentificadorSolicitante> 
-
-`                           `<NombreSolicitante>PICA</NombreSolicitante> 
-
-`                           `<Finalidad>FINALITAT</Finalidad> 
-
-`                           `<Consentimiento>Si</Consentimiento> 
-
-`                           `<Funcionario> 
-
-`                              `<NombreCompletoFuncionario>FUNCIONARIO</NombreCompletoFuncionario>                                <NifFuncionario>NIF</NifFuncionario> 
-
-`                              `<EMailFuncionario /> 
-
-`                           `</Funcionario> 
-
-`                        `</Solicitante>  
-
-`                        `<Titular> 
-
-`                           `<TipoDocumentacion>NIF</TipoDocumentacion> 
-
-`                           `<Documentacion>99999999R</Documentacion>  
-
-`                           `<NombreCompleto>Pere Parra Polser</NombreCompleto>  
-
-`                           `<Nombre>Pere</Nombre>  
-
-`                           `<Apellido1>Parra</Apellido1> 
-
-`                           `<Apellido2>Polser</Apellido2> 
-
-`                        `</Titular> 
-
-`                        `<Transmision>  
-
-`                           `<CodigoCertificado>TITULAR</CodigoCertificado> 
-
-`                           `<IdSolicitud>AOC00000000100373</IdSolicitud> 
-
-`                           `<IdTransmision>EXPEDIENT</IdTransmision>  
-
-`                           `<FechaGeneracion>18042007</FechaGeneracion> 
-
-`                        `</Transmision>  
-
-`                     `</DatosGenericos>  
-
-`                     `<DatosEspecificos>  
-
-`                        `<ns1:peticionDatosTitular xmlns:ns1="http://www.aocat.net/padro"> 
-
-`                           `<ns1:tipoDocumentacion>1</ns1:tipoDocumentacion> 
-
-`                           `<ns1:documentacion>99999999R</ns1:documentacion> 
-
-`                           `<ns1:codigoMunicipio>019</ns1:codigoMunicipio> 
-
-`                           `<ns1:codigoProvincia>08</ns1:codigoProvincia>                            <ns1:idescat>1</ns1:idescat>                         </ns1:peticionDatosTitular> 
-
-`                     `</DatosEspecificos> 
-
-`                  `</SolicitudTransmision> 
-
-`               `</Solicitudes>  
-
-`            `</Peticion> 
-
-`         `</procesa> 
-
-`      `</soapenv:Body> 
-
-`   `</soapenv:Envelope> 
 ` `PCI - Missatgeria\_v7.1.doc    ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.028.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.029.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.030.png)
