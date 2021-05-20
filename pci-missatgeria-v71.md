@@ -1,62 +1,46 @@
 # Especificació de missatgeria pel consum de productes – Plataforma de Col·laboració Interadministrativa (PCI)
 
-|**Versió** |**Data** |**Autor** |**Comentaris** |
-| - | - | - | - |
-|V1.0 |20/09/2007 |Equip HP |Versió inicial. |
-|V2.0 |05/03/2008 |Roger Noguera i Arnau |Incorporació del frontal FTP |
-|V3.0 |26/09/2008 |Roger Noguera i Arnau |Incorporació  de  les  extensions  de missatgeria PCI |
-|V4.0 |16/02/2009 |Roger Noguera i Arnau |Incorporació dels elements de suport a adjunts |
-|V4.1 |23/04/2009 |Roger Noguera i Arnau |Incorporació dels elements de caducitat de peticions. |
-|V5.0 |19/04/2011 |Roger Noguera i Arnau |Nous clústers d’interoperabilitat. |
-|V5.1 |05/03/2011 |Roger Noguera i Arnau |<p>Suport a adjunts (MTOM). </p><p>Eliminació  dels  elements  de  caducitat de peticions. </p>|
-|V5.2 |17/10/2013 |Roger Noguera i Arnau |Element *NombreFichero* opcional. |
-|V5.3 |30/07/2014 |Roger Noguera i Arnau |Extensions  de  missatgeria  PCI (versions  imprimibles)  adaptades  a DESA’L. |
-|V6.0 |01/01/2020 |Roger Noguera i Arnau |Discontinuació del frontal FTP. |
-|V7.0 |22/05/2020 |OT Suport Tècnic |Modificació  endpoint Clúster PCI, més afegir els nous per NT. |
-|V7.1 |30/11/2020 |OT Suport Tècnic |Modificació punt 5.1 (ST-11136) |
-
 # Índex
-
-[Introducció ...................................................................................................................................1](#introducció)
-[Requeriments d’accés als serveis ...............................................................................................1](#_page5_x82.00_y236.04)
-1. [Sol·licitud d’autorització ...............................................................................................................1](#_page5_x82.00_y329.04)
-1. [Requeriments per accés via frontal webservice ..........................................................................1](#_page5_x82.00_y563.04)
-1. [Política de seguretat ........................................................................................... 1](#_page5_x82.00_y602.04)
-1. [URLs d’accés de producció ................................................................................ 1](#_page5_x82.00_y680.04)
-1. [URLs d’accés de preproducció ........................................................................... 2](#_page6_x82.00_y448.04)
-3  [Frontals d’accés a la plataforma..................................................................................................3](#_page7_x82.00_y248.04)
-1. [Tipus de comunicació ..................................................................................................................3](#_page7_x82.00_y293.04)
-1. [Frontal webservice síncron ................................................................................. 3](#_page7_x82.00_y368.04)
-1. [Frontal webservice asíncron ............................................................................... 3](#_page7_x82.00_y682.04)
-2. [Tipus de missatges i operacions .................................................................................................4](#_page8_x82.00_y421.04)
-1. [Petició síncrona i asíncrona ............................................................................... 4](#_page8_x82.00_y657.04)
-1. [Confirmació petició ............................................................................................. 5](#_page9_x82.00_y294.04)
-1. [Sol·licitud de resposta per a una petició ............................................................ 5](#_page9_x82.00_y427.04)
-1. [Resposta a una petició ....................................................................................... 5](#_page9_x82.00_y596.04)
-4  [Detall de la missatgeria ...............................................................................................................6](#_page10_x82.00_y164.04)
-1. [Petició síncrona / asíncrona ........................................................................................................6](#_page10_x82.00_y195.04)
-1. [Estructura ........................................................................................................... 7](#_page11_x82.00_y119.04)
-1. [Descripció de camps .......................................................................................... 8](#_page12_x82.00_y119.04)
-1. [Exemple de missatge ....................................................................................... 11](#_page15_x82.00_y288.04)
-2. [Confirmació petició ................................................................................................................... 12](#_page16_x82.00_y214.04)
-1. [Estructura ......................................................................................................... 12](#_page16_x82.00_y236.04)
-1. [Descripció de camps ........................................................................................ 12](#_page16_x82.00_y591.04)
-1. [Exemple de missatge ....................................................................................... 13](#_page17_x82.00_y504.04)
-3. [Sol·licitud resposta ................................................................................................................... 14](#_page18_x82.00_y135.04)
-1. [Estructura ......................................................................................................... 14](#_page18_x82.00_y169.04)
-1. [Descripció de camps ........................................................................................ 14](#_page18_x82.00_y456.04)
-1. [Exemple de missatge ....................................................................................... 15](#_page19_x82.00_y524.04)
-4. [Resposta ................................................................................................................................... 16](#_page20_x82.00_y131.04)
-1. [Estructura ......................................................................................................... 16](#_page20_x82.00_y153.04)
-1. [Descripció de camps ........................................................................................ 17](#_page21_x82.00_y119.04)
-1. [Exemple de missatge ....................................................................................... 20](#_page24_x82.00_y323.04)
-5. [Extensions de missatgeria ........................................................................................................ 21](#_page25_x82.00_y229.04)
-1. [Estructura ......................................................................................................... 21](#_page25_x82.00_y415.04)
-1. [Descripció de camps ........................................................................................ 21](#_page25_x82.00_y582.04)
-1. [Exemple de missatge ....................................................................................... 22](#_page26_x82.00_y367.04)
-5  [Política de seguretat ................................................................................................................. 23](#_page27_x82.00_y119.04)
-1. [Autenticació .............................................................................................................................. 23](#_page27_x82.00_y150.04)
-1. [Autorització ............................................................................................................................... 23](#_page27_x82.00_y469.04)
+- [Introducció](#introducció)
+- [Requeriments d’accés als serveis](#requeriments-daccés-als-serveis)
+	* [Sol·licitud d’autorització](#sollicitud-dautorització)
+	* [Requeriments per accés via frontal webservice](#requeriments-per-accés-via-frontal-webservice)
+		- [Política de seguretat](#política-de-seguretat)
+		- [URLs d’accés de producció](#urls-daccés-de-producció)
+		- [URLs d’accés de preproducció](#urls-daccés-de-preproducció)
+- [Frontals d’accés a la plataforma](#frontals-daccés-a-la-plataforma)
+	* [Tipus de comunicació](#tipus-de-comunicació)
+		- [Frontal webservice síncron](#frontal-webservice-síncron)
+		- [Frontal webservice asíncron](#frontal-webservice-asíncron)
+	* [Tipus de missatges i operacions](#tipus-de-missatges-i-operacions)
+		- [Petició síncrona i asíncrona](#petició-síncrona-i-asíncrona)
+		- [Confirmació petició](#confirmació-petició)
+		- [Sol·licitud de resposta per a una petició](#sollicitud-de-resposta-per-a-una-petició)
+		- [Resposta a una petició](#resposta-a-una-petició)
+- [Detall de la missatgeria](#detall-de-la-missatgeria)
+	* [Petició síncrona / asíncrona](#petició-síncrona--asíncrona)
+		- [Estructura](#estructura)
+		- [Descripció de camps](#descripció-de-camps)
+		- [Exemple de missatge](#exemple-de-missatge)
+	* [Confirmació petició](#confirmació-petició-1)
+		- [Estructura](#estructura-1)
+		- [Descripció de camps](#descripció-de-camps-1)
+		- [Exemple de missatge](#exemple-de-missatge-1)
+	* [Sol·licitud resposta](#sollicitud-resposta)
+		- [Estructura](#estructura-2)
+		- [Descripció de camps](#descripció-de-camps-2)
+		- [Exemple de missatge](#exemple-de-missatge-2)
+	* [Resposta](#resposta)
+		- [Estructura](#estructura-3)
+		- [Descripció de camps](#descripció-de-camps-3)
+		- [Exemple de missatge](#exemple-de-missatge-3)
+	* [Extensions de missatgeria](#extensions-de-missatgeria)
+		- [Estructura](#estructura-4)
+		- [Descripció de camps](#descripció-de-camps-4)
+		- [Exemple de missatge](#exemple-de-missatge-4)
+- [Política de seguretat](#política-de-seguretat-1)
+	* [Autenticació](#autenticació)
+	* [Autorització](#autorització)
 
 # Introducció
 
@@ -861,5 +845,3 @@ soapenv:mustUnderstand="1">
 	</soapenv:Body> 
 </soapenv:Envelope> 
 ```
-
-` `PCI - Missatgeria\_v7.1.doc    ![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.028.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.029.png)![](Aspose.Words.a339dee1-fed1-4415-a2fa-1597ad8c44e1.030.png)
