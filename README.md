@@ -10,6 +10,6 @@ Tota la documentació d'integració antiga així com altre tipus de documentaci�
 
 Documentació específica del servei web de la PCI:
 
-[1. Guia d'integració](Missatgeria/README.MD)
+[1. Guia d'integració](Missatgeria/README.md)
 
 [2. Esquemes (xsds) de la missatgeria de PCI](Missatgeria/esquemes)
