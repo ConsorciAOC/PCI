@@ -228,7 +228,7 @@ El missatge corresponent a una petició es divideix en dos grans blocs:
 
 ![Peticio](img/Peticio.jpg)
 
-![Peticio detall solicitud](img/Peticio detall solicitud.jpg)
+![Peticio detall solicitud](img/Peticio%20detall%20solicitud.jpg)
 
 En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’informa el missatge específic del producte i modalitat de consum a la que es vol accedir. 
 
@@ -368,7 +368,7 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 ## Confirmació petició
 ### Estructura
 
-![Confirmacio peticio](img/Confirmacio peticio.jpg)
+![Confirmacio peticio](img/Confirmacio%20peticio.jpg)
 
 ### Descripció de camps
 
@@ -421,7 +421,7 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 
 ### Estructura
 
-![Solicitud resposta](img/solicitud resposta.jpg)
+![Solicitud resposta](img/solicitud%20resposta.jpg)
 
 ### Descripció de camps
 
@@ -483,7 +483,7 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 
 ![Resposta](img/resposta.jpg)
 
-![Resposta detall transmissió](img/resposta detall transmissio.jpg)
+![Resposta detall transmissió](img/resposta%20detall%20transmissio.jpg)
 
 ### Descripció de camps
 
@@ -628,9 +628,9 @@ Alguns serveis publicats a PCI permeten obtenir en la mateixa la resposta, en el
 
 ### Estructura
 
-![Extensions peticio](img/extensions peticio.jpg)
+![Extensions peticio](img/extensions%20peticio.jpg)
 
-![Extensions resposta](img/extensions resposta.jpg)
+![Extensions resposta](img/extensions%20resposta.jpg)
 
 ### Descripció de camps
 
