@@ -242,7 +242,10 @@
 			<xs:all>
 				<xs:element ref="IdentificadorSolicitante"/>
 				<xs:element ref="NombreSolicitante"/>
-				<xs:element ref="Finalidad"/>
+				<xs:choice>
+					<xs:element ref="Finalidad"/>
+					<xs:element ref="Procedimiento"/>
+				</xs:choice>
 				<xs:element ref="Consentimiento"/>
 				<xs:element ref="Funcionario" minOccurs="0"/>
 			</xs:all>
@@ -350,7 +353,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="NombreFichero" type="xs:string" minOccurs="0"/>
-				<xs:choice>					
+				<xs:choice>
 					<xs:element name="RutaFichero" type="xs:string"/>
 					<xs:element name="URLDescarga" type="xs:string"/>
 					<xs:element name="Contenido" type="xs:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
