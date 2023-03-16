@@ -511,14 +511,15 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 |Respuesta/Atributos/Funcionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del funcionari |
 |Respuesta |Transmisiones |BLOC |Si |Bloc  únic  que  engloba  la llista  de  sol·licituds  de transmissió que s’envien. |
 |Respuesta/Transmisiones |TransmisionDatos |BLOC |Si |Bloc que es repeteix de 1 a n cops. Conté les dades de resposta  relatives  a  una sol·licitud de transmissió. |
-|Respuesta/Transmisiones/Transmisio nDatos |DatosGenericos |BLOC |Si |Bloc únic. Conté les dades genèriques  sobre  una transmissió. |
-|Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos |Emisor |BLOC |Si |Bloc únic. Conté dades del emisor del servei. |
-|Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Emisor |NifEmisor |String |Si |Identificador (NIF/CIF) del Emissor. |
-|Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Emisor  |NombreEmisor |String |Si |Nom  del  emissor  o  raó social. |
-|soap:Body/[cridaSincronaResponse/| obtindreResultatResponse/]?Respues ta/Transmisiones/TransmisionDatos/ DatosGenericos |Solicitante |BLOC |Si |Bloc únic. Conté dades del sol·licitant  de  la transacció. |
+|Respuesta/Transmisiones/TransmisionDatos |DatosGenericos |BLOC |Si |Bloc únic. Conté les dades genèriques  sobre  una transmissió. |
+|Respuesta/Transmisiones/TransmisionDatos/DatosGenericos |Emisor |BLOC |Si |Bloc únic. Conté dades del emisor del servei. |
+|Respuesta/Transmisiones/TransmisionDatos/DatosGenericos/Emisor |NifEmisor |String |Si |Identificador (NIF/CIF) del Emissor. |
+|Respuesta/Transmisiones/TransmisionDatos/DatosGenericos/Emisor  |NombreEmisor |String |Si |Nom  del  emissor  o  raó social. |
+|soap:Body/[cridaSincronaResponse/| obtindreResultatResponse/]?Respuesta/Transmisiones/TransmisionDatos/ DatosGenericos |Solicitante |BLOC |Si |Bloc únic. Conté dades del sol·licitant  de  la transacció. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |IdentificadorSolicitante |String |Si |Codi  identificador  del requeridor. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |NombreSolicitante |String |Si |Nom o raó social. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |Finalidad  |String |Si  |Finalitat  associada  al consum  del  producte  la petició. |
+|Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Procedimiento  |String |Si  |Autorització per procediment SIA només per Via Oberta |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |Consentimiento |String |Si |<p>D’acord amb l’apartat 4 de l’article  15  del  RD 263/1996,  els  valors admesos son: </p><p>- Si </p><p>- Ley </p>|
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la sol·licitud. |
 |Respuesta/Transmisiones/Transmisio nDatos/DatosGenericos/Solicitante/ Funcionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
