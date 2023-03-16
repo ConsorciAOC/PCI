@@ -264,6 +264,7 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |IdentificadorSolicitante |String |Si |Codi  identificador  del requeridor. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |NombreSolicitante |String |Si |Nom o raó social. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Finalidad  |String |Si  |Finalitat  associada  al consum  del  producte  la petició. |
+|Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Procedimiento  |String |Si  |Autorització per procediment SIA només per Via Oberta |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Consentimiento |String |Si |<p>D’acord amb l’apartat 4 de l’article  15  del  RD 263/1996,  els  valors admesos son: </p><p>- Si </p><p>- Ley </p>|
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la sol·licitud. |
 |Peticion/Solitudes/SolicitudTransm ision/DatosGenericos/Solicitante/F uncionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. |
