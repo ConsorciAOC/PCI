@@ -252,7 +252,7 @@ En l’schema anterior es ressalta l’element `<DatosEspecificos>`, on s’info
 |Peticion/Atributos/ |Funcionario |BLOC |No |Bloc únic. Conté dades del funcionari  que  ha  generat la petició. |
 |Peticion/Atributos/Funcionario |NombreCompletoFuncionario |String |No |Nom complert del Funcionari que ha generat la petició. </br>**En el cas de serveis d'Interoperabitalitat(VO), per donar compliment a la normativa aplicable, sempre s'ha d'emplenar i les dades que s'informin cal que siguin reals** |
 |Peticion/Atributos/Funcionario |NifFuncionario |String |No |Identificador  (NIF)  del funcionari.</br>**En el cas de serveis d'Interoperabitalitat(VO), per donar compliment a la normativa aplicable, sempre s'ha d'emplenar i les dades que s'informin cal que siguin reals** |
-|Peticion/Atributos/Funcionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari. </br>**En el cas de serveis d'Interoperabitalitat(VO), per donar compliment a la normativa aplicable, sempre s'ha d'emplenar i les dades que s'informin cal que siguin reals**  |
+|Peticion/Atributos/Funcionario |EMailFuncionario |String |No |Adreça  de  correu  del funcionari.|
 |Peticion/Atributos/Funcionario |CertificadoDigital |Base64Binary |No |Certificat  Digital  del funcionari |
 |Peticion |Solicitudes |BLOC |Si |Bloc  únic  que  engloba  la llista  de  sol·licituds  de transmissió que s’envien. |
 |Peticion/Solitudes  |SolicitudTransmision |BLOC |Si |Bloc que es repeteix de 1 a n  cops.  Conté  les  dades relatives a una sol·licitud de transmissió. |
