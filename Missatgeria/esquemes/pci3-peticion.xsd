@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:schema xmlns="http://gencat.net/scsp/esquemes/peticion" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" targetNamespace="http://gencat.net/scsp/esquemes/peticion" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<s:element name="Apellido1">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="40"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Apellido2">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="40"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Atributos">
+		<s:complexType>
+			<s:all>
+				<s:element ref="IdPeticion"/>
+				<s:element ref="NumElementos"/>
+				<s:element ref="TimeStamp"/>
+				<s:element ref="Estado" minOccurs="0"/>
+				<s:element ref="CodigoCertificado"/>
+				<s:element ref="CodigoProducto"/>
+				<s:element ref="DatosAutorizacion" minOccurs="0"/>
+				<s:element ref="Emisor" minOccurs="0"/>
+				<s:element ref="IdSolicitanteOriginal" minOccurs="0"/>
+				<s:element ref="NomSolicitanteOriginal" minOccurs="0"/>
+				<s:element ref="Funcionario" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="CodigoCertificado">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="64"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="CodigoEstado">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="4"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="CodigoEstadoSecundario">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="16"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Consentimiento">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:enumeration value="Si"/>
+				<s:enumeration value="Ley"/>
+                <s:enumeration value="NoOpo"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="DatosGenericos">
+		<s:complexType>
+			<s:all>
+				<s:element ref="Emisor"/>
+				<s:element ref="Solicitante"/>
+				<s:element ref="Titular" minOccurs="0"/>
+				<s:element ref="Transmision"/>
+				<s:element ref="Ficheros" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="Documentacion">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="14"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Emisor">
+		<s:complexType>
+			<s:all>
+				<s:element ref="NifEmisor"/>
+				<s:element ref="NombreEmisor"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="Estado">
+		<s:complexType>
+			<s:all>
+				<s:element ref="CodigoEstado" minOccurs="0"/>
+				<s:element ref="CodigoEstadoSecundario" minOccurs="0"/>
+				<s:element ref="LiteralError" minOccurs="0"/>
+				<s:element ref="TiempoEstimadoRespuesta" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="FechaGeneracion">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="29"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Finalidad">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="250"/>
+				<s:minLength value="1"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+    <s:element name="Procedimiento">
+      <s:simpleType>
+        <s:restriction base="s:string">
+          <s:maxLength value="20"/>
+          <s:minLength value="3"/>
+        </s:restriction>
+      </s:simpleType>
+    </s:element>
+	<s:element name="Funcionario">
+		<s:complexType>
+			<s:sequence>
+				<s:element ref="NombreCompletoFuncionario" minOccurs="0"/>
+				<s:element ref="NifFuncionario" minOccurs="0"/>
+				<s:element ref="EMailFuncionario" minOccurs="0"/>
+				<s:element ref="CodigoOrganismoFuncionario" minOccurs="0"/>
+				<s:element name="CertificadoDigital" type="s:base64Binary" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="IdentificadorSolicitante">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="10"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="IdPeticion">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="100"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="IdSolicitud">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="40"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="IdTransmision">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="26"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="LiteralError">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="255"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NifEmisor">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="10"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NombreCompletoFuncionario">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="122"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NifFuncionario">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="10"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="EMailFuncionario">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="122"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="CodigoOrganismoFuncionario">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="10"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Nombre">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="40"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NombreCompleto">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="122"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NombreEmisor">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="50"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NombreSolicitante">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="100"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NumElementos">
+		<s:simpleType>
+			<s:restriction base="s:int">
+				<s:totalDigits value="7"/>
+				<s:minInclusive value="0"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Peticion">
+		<s:complexType>
+			<s:all>
+				<s:element ref="Atributos"/>
+				<s:element ref="Solicitudes"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="Solicitante">
+		<s:complexType>
+			<s:all>
+				<s:element ref="IdentificadorSolicitante"/>
+				<s:element ref="NombreSolicitante"/>
+				<s:choice>
+				  <s:element ref="Finalidad"/>
+				  <s:element ref="Procedimiento"/>
+				</s:choice>
+				<s:element ref="Consentimiento"/>
+				<s:element ref="Funcionario" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="Solicitudes">
+		<s:complexType>
+			<s:sequence>
+				<s:element ref="SolicitudTransmision" maxOccurs="unbounded"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="SolicitudTransmision">
+		<s:complexType>
+			<s:all>
+				<s:element ref="DatosGenericos"/>
+				<s:element ref="DatosEspecificos" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="TiempoEstimadoRespuesta">
+		<s:simpleType>
+			<s:restriction base="s:int">
+				<s:totalDigits value="4"/>
+				<s:minInclusive value="0"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="TimeStamp">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="29"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="TipoDocumentacion">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:enumeration value="CIF"/>
+				<s:enumeration value="NIF"/>
+				<s:enumeration value="DNI"/>
+				<s:enumeration value="Pasaporte"/>
+				<s:enumeration value="NIE"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Titular">
+		<s:complexType>
+			<s:sequence>
+				<s:element ref="TipoDocumentacion"/>
+				<s:element ref="Documentacion"/>
+				<s:element ref="NombreCompleto" minOccurs="0"/>
+				<s:element ref="Nombre" minOccurs="0"/>
+				<s:element ref="Apellido1" minOccurs="0"/>
+				<s:element ref="Apellido2" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="Transmision">
+		<s:complexType>
+			<s:all>
+				<s:element ref="CodigoCertificado"/>
+				<s:element ref="IdSolicitud"/>
+				<s:element ref="IdTransmision" minOccurs="0"/>
+				<s:element ref="FechaGeneracion" minOccurs="0"/>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="DatosAutorizacion">
+		<s:complexType>
+			<s:all>
+				<s:element ref="IdentificadorSolicitante"/>
+				<s:element ref="NombreSolicitante"/>
+				<s:choice>        
+				  <s:element ref="Finalidad"/>
+				  <s:element ref="Procedimiento"/>
+				</s:choice>
+			</s:all>
+		</s:complexType>
+	</s:element>
+	<s:element name="CodigoProducto">
+		<s:simpleType>
+			<s:restriction base="s:string"/>
+		</s:simpleType>
+	</s:element>
+	<s:element name="IdSolicitanteOriginal">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="10"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="NomSolicitanteOriginal">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="100"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Ficheros">
+		<s:complexType>
+			<s:sequence>
+				<s:element ref="Fichero" maxOccurs="unbounded"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="Fichero">
+		<s:complexType>
+			<s:sequence>
+				<s:element name="NombreFichero" type="s:string" minOccurs="0"/>
+				<s:choice>
+					<s:element name="RutaFichero" type="s:string"/>
+					<s:element name="URLDescarga" type="s:string"/>
+					<s:element name="Contenido" type="s:base64Binary" xmime:expectedContentTypes="application/octet-stream"/>
+					<s:element name="UUIDFichero">
+						<s:simpleType>
+							<s:restriction base="s:string">
+								<s:pattern value="([0-9]|[a-f]|[A-F]){8}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){12}"/>
+							</s:restriction>
+						</s:simpleType>
+					</s:element>
+					<s:element name="UUIDDocumento">
+						<s:simpleType>
+							<s:restriction base="s:string">
+								<s:pattern value="([0-9]|[a-f]|[A-F]){8}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){4}-([0-9]|[a-f]|[A-F]){12}"/>
+							</s:restriction>
+						</s:simpleType>
+					</s:element>
+				</s:choice>
+				<s:element ref="Id"/>
+				<s:element name="Hash" type="s:base64Binary" minOccurs="0"/>
+				<s:element name="Firma" type="s:base64Binary" minOccurs="0"/>
+				<s:element ref="Via" minOccurs="0"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+	<s:element name="Id">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:maxLength value="50"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="Via">
+		<s:simpleType>
+			<s:restriction base="s:string">
+				<s:enumeration value="Entrada"/>
+				<s:enumeration value="Salida"/>
+			</s:restriction>
+		</s:simpleType>
+	</s:element>
+	<s:element name="DatosEspecificos">
+		<s:complexType>
+			<s:sequence>
+				<s:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			</s:sequence>
+		</s:complexType>
+	</s:element>
+</s:schema>
