@@ -6,6 +6,7 @@
 	* [Sol·licitud d’autorització](#sollicitud-dautorització)
 	* [Requeriments per accés via frontal webservice](#requeriments-per-accés-via-frontal-webservice)
 		- [Política de seguretat](#política-de-seguretat)
+		- [Entorns](#1) 
 		- [URLs d’accés de producció](#urls-daccés-de-producció)
 		- [URLs d’accés de preproducció](#urls-daccés-de-preproducció)
 - [Frontals d’accés a la plataforma](#frontals-daccés-a-la-plataforma)
@@ -69,6 +70,10 @@ Un cop l’autorització es faci efectiva, s’informarà a l’organisme requer
 ### Política de seguretat
 
 Tota petició destinada a la PCI via un frontal webservice està subjecte a la política de seguretat que es detalla en l’apartat [*Política de seguretat*](#política-de-seguretat-1) d’aquest document. 
+
+### Entorns <a name="1"></a>
+
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) Recordeu que els entorns de DEV i PRE estan destinats únicament per a l'ús de proves i que d'acord amb el Supervisor Europeo de Protecció de Dades (EDPS) no es poden fer servir dades personals reals. 
 
 ### URLs d’accés de producció
 
